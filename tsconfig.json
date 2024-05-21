@@ -1,0 +1,53 @@
+{
+    "compilerOptions": {
+        "target": "es2021",
+        "types": [
+            "vitest/globals",
+            "@testing-library/jest-dom",
+            "cypress"
+        ],
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "esnext"
+        ],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "noEmit": true,
+        "esModuleInterop": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "jsx": "preserve",
+        "incremental": true,
+        "baseUrl": ".",
+        "paths": {
+            "~/*": [
+                "source/*",
+                "styles/*",
+                "pages/*",
+                "public/*",
+            ]
+        },
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ]
+    },
+    "include": [
+        "next-env.d.ts",
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.js",
+        "**/*.jsx",
+        ".next/types/**/*.ts",
+        "source/pages/Modules/shared/ProfilePetPage/components/molecules/address-tutor",
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

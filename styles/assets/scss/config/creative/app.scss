@@ -1,0 +1,18 @@
+//Core files
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "variables";
+@import "./node_modules/bootstrap/scss/mixins";
+
+@import "theme-light";
+// Components
+@import "../../components/helper";
+@import "../../components/preloader";
+@import "../../components/waves";
+@import "../../components/widgets";
+@import "../../components/scroll";
+
+// Pages
+@import "../../pages/authentication";
+@import "../../pages/profile";
+@import "../../pages/landing";
