@@ -261,10 +261,10 @@ const HomePage = () => {
                     Por que usar?
                 </h2>
                 <div className="bg-overlay bg-overlay-pattern" />
-                <div className="grid grid-cols-1 web:grid-cols-2">
+                <div className="grid grid-cols-1 p-2 tablet:grid-cols-2 web:grid-cols-2">
                     <Zoom right>
                         <div className="col-span-1 pt-5 mt-5 text-center mt-lg-5">
-                            <div className="bg-secondary rounded-xl w-3/4 shadow-md m-5">
+                            <div className="bg-secondary rounded-xl w-4/4 lg:w-3/4 shadow-md m-2">
                                 <p className="p-4 font-sans text-lg font-semibold text-white lg:text-2xl">
                                     {`
                                  1. Com nosso app, você terá acesso
@@ -281,7 +281,7 @@ const HomePage = () => {
                         </div>
                     </Zoom>
                     <Slide left>
-                        <div className="col-span-1 hidden lg:block">
+                        <div className="col-span-1 hidden sm:block md:block lg:block">
                             <img
                                 src="/bg-three.jpg"
                                 className="w-[75%]"
@@ -290,9 +290,9 @@ const HomePage = () => {
                         </div>
                     </Slide>
                 </div>
-                <div className="grid grid-cols-1 p-2 web:grid-cols-2">
+                <div className="grid grid-cols-1 p-2 tablet:grid-cols-2 web:grid-cols-2">
                     <Slide right>
-                        <div className="col-span-1">
+                        <div className="col-span-1 hidden sm:block md:block lg:block">
                             <img
                                 src="/Sem título.jpg"
                                 className="w-100"
@@ -302,7 +302,7 @@ const HomePage = () => {
                     </Slide>
                     <Zoom left>
                         <div className="col-span-1 pt-5 text-center mt-lg-5">
-                            <div className="bg-secondary rounded-xl w-3/4 shadow-md m-2">
+                            <div className="bg-secondary rounded-xl w-4/4 lg:w-3/4 shadow-md m-2">
                                 <p className="p-4 font-sans text-lg font-semibold text-white lg:text-2xl">
                                     {`
                                  2. Nossa plataforma oferece uma
@@ -320,10 +320,10 @@ const HomePage = () => {
                         </div>
                     </Zoom>
                 </div>
-                <div className="grid grid-cols-1 p-4 web:grid-cols-2">
+                <div className="grid grid-cols-1 p-2 tablet:grid-cols-2 web:grid-cols-2">
                     <Zoom right>
                         <div className="col-span-1 pt-5 text-center mt-lg-5">
-                            <div className="bg-secondary rounded-xl w-3/4 shadow-md m-2">
+                            <div className="bg-secondary rounded-xl w-4/4 lg:w-3/4 shadow-md m-2">
                                 <p className=" p-4 font-sans text-lg font-semibold text-white lg:text-2xl">
                                     {`
                                  3. Facilitamos a colaboração entre você e
@@ -340,7 +340,7 @@ const HomePage = () => {
                         </div>
                     </Zoom>
                     <Slide left>
-                        <div className="col-span-1">
+                        <div className="col-span-1 hidden sm:block md:block lg:block">
                             <img
                                 src="/landing-page-01.jpg"
                                 className="w-100"
@@ -349,9 +349,9 @@ const HomePage = () => {
                         </div>
                     </Slide>
                 </div>
-                <div className="grid grid-cols-1 p-4 web:grid-cols-2">
+                <div className="grid grid-cols-1 p-2 tablet:grid-cols-2 web:grid-cols-2">
                     <Slide right>
-                        <div className="col-span-1">
+                        <div className="col-span-1 hidden sm:block md:block lg:block">
                             <img
                                 src="/icon-pet/teiu-primary.png"
                                 className="w-[60%]"
@@ -361,7 +361,7 @@ const HomePage = () => {
                     </Slide>
                     <Zoom left>
                         <div className="col-span-1 pt-5 text-center mt-lg-5">
-                            <div className="bg-secondary rounded-xl w-3/4 shadow-md m-2">
+                            <div className="bg-secondary rounded-xl w-4/4 lg:w-3/4 shadow-md m-2">
                                 <p className="p-4 font-sans text-lg font-semibold text-white lg:text-2xl">
                                     {`
                                  4. Investimos pesadamente em
@@ -378,10 +378,10 @@ const HomePage = () => {
                         </div>
                     </Zoom>
                 </div>
-                <div className="grid grid-cols-1 p-4 web:grid-cols-2">
+                <div className="grid grid-cols-1 p-2 tablet:grid-cols-2 web:grid-cols-2">
                     <Zoom right>
                         <div className="col-span-1 pt-5 text-center mt-lg-5">
-                            <div className="bg-secondary rounded-xl w-3/4 shadow-md m-2">
+                            <div className="bg-secondary rounded-xl w-4/4 lg:w-3/4 shadow-md m-2">
                                 <p className=" p-4 font-sans text-lg font-semibold text-white lg:text-2xl">
                                     {`
                                  5 .Com uma interface intuitiva e
@@ -399,7 +399,7 @@ const HomePage = () => {
                         </div>
                     </Zoom>
                     <Slide left>
-                        <div className="col-span-1">
+                        <div className="col-span-1 hidden sm:block md:block lg:block">
                             <img
                                 src="/Sem título2.jpg"
                                 className="w-100"
@@ -413,34 +413,34 @@ const HomePage = () => {
             <section className="section pb-0 hero-section bg-white">
                 <div className="grid grid-cols-1 p-4 web:grid-cols-2">
                     <Zoom>
-                        <div className="col-span-1 pt-5 text-center mt-lg-5">
+                        <div className="col-span-1 md:pt-5 text-center md:mt-lg-5">
                             <p className="p-2 font-sans text-lg font-semibold lg:text-2xl">
                                 {`Roadmap`}
                             </p>
-                            <div className="w-3/6 flex justify-start">
-                                <div className="bg-secondary rounded-xl shadow-md m-2">
-                                    <p className="p-3 font-sans text-lg font-semibold text-white lg:text-xl">
+                            <div className="md:w-3/6 flex justify-center lg:justify-start">
+                                <div className="bg-primary lg:bg-secondary rounded-xl shadow-md m-2">
+                                    <p className="p-3 font-sans text-md font-semibold text-white lg:text-xl">
                                         {`Inteligência Artificial Abril de 2025`}
                                     </p>
                                 </div>
                             </div>
-                            <div className="w-4/6 flex justify-end">
+                            <div className="lg:w-4/6 flex justify-center md:justify-center">
                                 <div className="bg-secondary rounded-xl shadow-md m-2">
-                                    <p className=" p-3 font-sans text-lg font-semibold text-white lg:text-xl">
+                                    <p className=" p-3 font-sans text-md font-semibold text-white lg:text-xl">
                                         {`VetMovel e Telemedicina Dezembro de 2024`}
                                     </p>
                                 </div>
                             </div>
-                            <div className="w-5/6 flex justify-end">
-                                <div className="bg-secondary rounded-xl shadow-md m-2">
-                                    <p className=" p-3 font-sans text-lg font-semibold text-white lg:text-xl">
+                            <div className="lg:w-5/6 md:w-5/6 flex justify-center md:justify-end">
+                                <div className="bg-primary lg:bg-secondary rounded-xl shadow-md m-2">
+                                    <p className=" p-3 font-sans text-md font-semibold text-white lg:text-xl">
                                         {`Secretaria Inteligente Agosto de 2024`}
                                     </p>
                                 </div>
                             </div>
-                            <div className="w-6/6 flex justify-end">
+                            <div className="flex justify-center md:justify-end">
                                 <div className="bg-secondary rounded-xl shadow-md m-2">
-                                    <p className=" p-3 font-sans text-lg font-semibold text-white lg:text-xl">
+                                    <p className=" p-3 font-sans text-md font-semibold text-white lg:text-xl">
                                         {`Consultas veterinárias Abril de 2024`}
                                     </p>
                                 </div>
@@ -461,21 +461,21 @@ const HomePage = () => {
 
             <section className="section bg-primary-500">
                 <div className="bg-overlay bg-overlay-pattern" />
-                <div className="grid grid-cols-1 p-4 mt-5 web:grid-cols-2">
+                <div className="grid gap-4 md:gap-0 grid-cols-1 p-4 mt-5 tablet:grid-cols-2 web:grid-cols-2">
                     <Slide left>
                         <div className="col-span-1 rounded-md">
                             <div className="flex justify-center">
-                                <div className="bg-white flex flex-col gap-4 items-center justify-center rounded-lg p-4 w-1/2 h-[400px]">
-                                    <h3 className="lg:text-5xl text-gray-500">
+                                <div className="bg-white flex flex-col gap-4 items-center justify-center rounded-lg p-4 w-3/4 tablet:w-3/4 md:w-1/2 h-[400px]">
+                                    <h3 className="text-5xl text-gray-500">
                                         Grátis
                                     </h3>
-                                    <p className="lg:text-4xl text-primary">
+                                    <p className="text-4xl text-primary">
                                         $ 0,00
                                     </p>
-                                    <p className="lg:text-xl">
+                                    <p className="text-xl">
                                         Faça 30 consultas grátis
                                     </p>
-                                    <p className="lg:text-md">
+                                    <p className="text-md">
                                         Tenha acesso a todos os recursos sem
                                         limitação
                                     </p>
@@ -484,18 +484,18 @@ const HomePage = () => {
                         </div>
                         <div className="col-span-1">
                             <div className="flex justify-center">
-                                <div className="bg-white flex flex-col gap-4 items-center justify-center rounded-lg p-4 w-1/2 h-[400px]">
-                                    <h3 className="lg:text-5xl text-gray-500">
+                                <div className="bg-white flex flex-col gap-4 items-center justify-center rounded-lg p-4 w-3/4 tablet:w-3/4 md:w-1/2 h-[400px]">
+                                    <h3 className="text-5xl text-gray-500">
                                         Premium
                                     </h3>
-                                    <p className="lg:text-4xl text-primary">
+                                    <p className="text-4xl text-primary">
                                         $ 0,99
                                     </p>
-                                    <p className="lg:text-xl text-gray-700">
+                                    <p className="text-xl text-gray-700">
                                         Pague menos de 1 dólar por consulta
                                         realizada.
                                     </p>
-                                    <p className="lg:text-md text-gray-700">
+                                    <p className="text-md text-gray-700">
                                         Tenha acesso a todos os recursos sem
                                         limitação
                                     </p>
