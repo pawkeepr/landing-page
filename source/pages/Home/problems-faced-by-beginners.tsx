@@ -2,36 +2,31 @@ import ListingFactory from "~/Components/molecules/listing-factory";
 
 export const ProblemsFacedByBeginners = () => {
     const problems: Array<string> = [
-        `Estabelecimento de Clientela: Iniciar um consultório veterinário
-    ou serviço de atendimento domiciliar requer esforços de
-    marketing e networking para atrair os primeiros clientes.`,
-        `Falta de Experiência Prática: Veterinários podem se sentir
-    inseguros em lidar com certos casos após a formação, exigindo
-    tempo para ganhar confiança em suas habilidades práticas.
+        `Estabelecimento de Clientela: Marketing e networking são 
+        essenciais para atrair os primeiros clientes.`,
+
+        `Falta de Experiência Prática:  Ganhar confiança após a 
+        formação é fundamental para lidar com casos diversos.
     `,
-        `Administração do Negócio: Veterinários recém-formados
-    podem enfrentar dificuldades na gestão do negócio, incluindo
-    questões financeiras, contabilidade e gerenciamento de
-    funcionários.`,
+        `Administração do Negócio: Gestão financeira, contabilidade 
+        e gerenciamento de funcionários são desafios comuns enfrentados`,
+
         `Equilíbrio Trabalho-Vida: O campo veterinário exige longas
 horas de trabalho, afetando o equilíbrio pessoal,
 especialmente para iniciantes.
 `,
-        `Investimentos em Equipamentos: Equipamentos
-veterinários e instalações adequadas são caros,
-especialmente para iniciantes sem acesso a financiamentos
-favoráveis.
+        `Investimentos em Equipamentos: Equipamentos veterinários são 
+        caros e representam um contratempo financeiro para esses profissionais.
 `,
-        `Concorrência com Clínicas: Competir com clínicas
-estabelecidas pode ser desafiador para novos profissionais
-que buscam construir reputação.
+        `Concorrência com Clínicas: Competir com clínicas estabelecidas 
+        requer esforços adicionais para construir reputação.
 `,
     ];
 
     return (
         <>
             <ListingFactory
-                title="Problemas para quem está começando"
+                title="Desafios enfrentados por veterinários iniciantes"
                 listPosition="left"
                 items={problems}
             />

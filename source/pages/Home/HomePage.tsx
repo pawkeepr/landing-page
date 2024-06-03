@@ -82,13 +82,11 @@ const HomePage = () => {
                         <div className="flex items-center text-center col-span-1">
                             <p className="text-lg lg:text-2xl font-semibold font-sans p-4">
                                 {`
-                                  Nossa startup preenche uma lacuna no mercado, fornecendo uma
-                                  plataforma adaptada para médicos veterinários que atendem a domicílio e
-                                  aqueles que estão iniciando. Enquanto as soluções existentes se concentram
-                                  em clínicas estabelecidas, nosso aplicativo é uma ferramenta específica para
-                                  esses profissionais, permitindo que eles forneçam cuidados de qualidade aos
-                                  animais de estimação diretamente em seus lares, com uma ferramenta
-                                  simples e intuitiva.
+                                  Nossa startup revoluciona o mercado, oferecendo uma plataforma 
+                                  exclusiva para médicos veterinários domiciliares e iniciantes. 
+                                  De forma simples e intuitiva para esses profissionais, proporcionamos 
+                                  cuidados de qualidade aos animais de estimação no conforto de seus lares, 
+                                  preenchendo uma lacuna no setor tradicional das clínicas.
                                 `}
                             </p>
                         </div>
@@ -155,8 +153,8 @@ const HomePage = () => {
                         <div className="col-span-1 pt-5 text-center mt-lg-5">
                             <p className="p-4 font-sans text-lg font-semibold text-white lg:text-2xl">
                                 {`
-                                   PawKeepr é uma solução personalizada para veterinários que oferecem
-                                   cuidados de qualidade diretamente nas residências dos animais de estimação.
+                                   PawKeepr: a solução personalizada para veterinários oferecendo
+                                   cuidados de qualidade em residências de animais de estimação.
                              
                                 `}
                             </p>
@@ -166,15 +164,18 @@ const HomePage = () => {
                                     acessíveis.
                                 `}</p>
                             <p className="p-4 font-sans text-lg font-semibold text-white lg:text-2xl">{`      
-                                   Compatível com tablets, celulares e computadores, facilita o gerenciamento de
-                                   informações do paciente e a comunicação com os clientes, permitindo que os
-                                   veterinários se concentrem em oferecer os melhores cuidados possíveis, onde
-                                   quer que estejam.`}</p>
+                                   Compatível com tablets, celulares e computadores, simplifica o gerenciamento 
+                                   de informações e a comunicação com os clientes, permitindo que os veterinários 
+                                   acessem rapidamente as informações médicas dos pets, sincronizar automaticamente 
+                                   os dados, colaborar eficientemente com os tutores focando totalmente nos 
+                                   melhores cuidados para os bichinhos, em qualquer localidade.
+                                   `}</p>
                         </div>
                     </Zoom>
                 </div>
             </section>
 
+            {/* Sugestão: Excluir a seção. Informações redundantes que poderiam ser resumidas e incluidas na seção anterior. */}
             <section className="section pb-0 hero-section bg-white">
                 <div className="bg-overlay bg-overlay-pattern" />
                 <div className="grid grid-cols-1 place-items-center md:mt-0 md:grid-cols-2 p-4">

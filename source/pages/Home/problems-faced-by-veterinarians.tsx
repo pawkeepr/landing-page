@@ -3,22 +3,20 @@ import ListingFactory from "~/Components/molecules/listing-factory";
 export const ProblemsFacedByVeterinarians = () => {
     const problems: Array<string> = [
         `
-    Limitações de Usabilidade: Plataformas convencionais não são
-    adequadas para visitas domiciliares, resultando em interfaces
-    complexas e dificultando o acesso rápido às informações do
-    paciente.   
+    Usabilidade limitada: Plataformas convencionais são complexas e 
+    dificultam o acesso rápido às informações do paciente durante 
+    visitas domiciliares.  
 `,
         `
-Falta de Identidade Específica: As soluções disponíveis não
-refletem as práticas e valores únicos dos veterinários domiciliares,
-carecendo de uma identidade personalizada.
+        Identidade Genérica: As soluções existentes não refletem os 
+        valores únicos dos veterinários domiciliares,  carecendo de 
+        uma identidade personalizada.
 
 `,
         `
-Preços Inacessíveis: As soluções existentes são caras, tornando-as
-inviáveis para veterinários autônomos ou em início de carreira,
-limitando o acesso a ferramentas essenciais para o atendimento
-domiciliar.
+Preços Inacessíveis: As soluções existentes são caras e inviáveis 
+para veterinários autônomos ou iniciantes, limitando o acesso a 
+ferramentas essenciais.
   
 `,
     ];
@@ -26,7 +24,7 @@ domiciliar.
     return (
         <>
             <ListingFactory
-                title="Os principais problemas enfrentados por esses veterinários incluem:"
+                title="Desafios enfrentados por veterinários domiciliares:"
                 listPosition="right"
                 items={problems}
             />
