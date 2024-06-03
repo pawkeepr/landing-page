@@ -175,59 +175,6 @@ const HomePage = () => {
                 </div>
             </section>
 
-            {/* Seção excluída: Informações redundantes que poderiam ser resumidas e incluidas na seção anterior. */}
-            {/*<section className="section pb-0 hero-section bg-white">
-                <div className="bg-overlay bg-overlay-pattern" />
-                <div className="grid grid-cols-1 place-items-center md:mt-0 md:grid-cols-2 p-4">
-                    <Zoom>
-                        <div className="col-span-1 pt-5 text-center mt-lg-5">
-                            <p className="text-lg lg:text-xl font-semibold font-sans p-4">{`      
-                                 A PawKeepr é uma startup que resolve um problema significativo para veterinários que
-                                 oferecem atendimento domiciliar a animais de estimação. Tradicionalmente, esses
-                                 profissionais enfrentam dificuldades devido à falta de soluções específicas no mercado.
-                                 `}</p>
-                            <p className="text-lg lg:text-xl font-semibold font-sans p-4">{`      
-                                   A PawKeepr preenche essa lacuna com uma plataforma adaptada, oferecendo
-                                   usabilidade otimizada, identidade única e preço acessível. Isso permite aos veterinários
-                                   domiciliares gerenciar facilmente informações dos pacientes, se comunicar com os
-                                   clientes e melhorar a qualidade dos cuidados.
-                                   `}</p>
-                            <p className="text-lg lg:text-xl font-semibold font-sans p-4">{`      
-                                   Com a PawKeepr, os veterinários podem acessar rapidamente as informações médicas
-                                   dos pets, sincronizar automaticamente os dados, colaborar eficientemente com os
-                                   tutores e focar completamente em oferecer os melhores cuidados possíveis aos
-                                   animais, onde quer que estejam.`}</p>
-                        </div>
-                    </Zoom>
-
-                    <Slide left>
-                        <div className="col-span-1">
-                            <img
-                                src="/icon-pet/cat_secondary.png"
-                                className="w-100 h-[90%] !border-none rounded-3xl"
-                                alt="..."
-                            />
-                        </div>
-                    </Slide>
-                </div>
-            </section>
-
-            <section className="section bg-primary-500">
-                <div className="bg-overlay bg-overlay-pattern" />
-                <div className="grid grid-cols-1 p-4 mt-5 web:grid-cols-2">
-                    <Slide left>
-                        <div className="col-span-1">
-                            <img
-                                src="/landing-page-01.jpg"
-                                className="w-100"
-                                alt="Landing Page"
-                            />
-                        </div>
-                    </Slide>
-                    <BusinessDifferentials />
-                </div>
-            </section>*/}
-
             <section className="section pb-0 hero-section bg-white">
                 <div className="bg-overlay bg-overlay-pattern" />
                 <div className="grid grid-cols-1 place-items-center md:mt-0 md:grid-cols-2 p-4">
