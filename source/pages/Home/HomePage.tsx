@@ -82,13 +82,11 @@ const HomePage = () => {
                         <div className="flex items-center text-center col-span-1">
                             <p className="text-lg lg:text-2xl font-semibold font-sans p-4">
                                 {`
-                                  Nossa startup preenche uma lacuna no mercado, fornecendo uma
-                                  plataforma adaptada para médicos veterinários que atendem a domicílio e
-                                  aqueles que estão iniciando. Enquanto as soluções existentes se concentram
-                                  em clínicas estabelecidas, nosso aplicativo é uma ferramenta específica para
-                                  esses profissionais, permitindo que eles forneçam cuidados de qualidade aos
-                                  animais de estimação diretamente em seus lares, com uma ferramenta
-                                  simples e intuitiva.
+                                  Nossa startup revoluciona o mercado, oferecendo uma plataforma 
+                                  exclusiva para médicos veterinários domiciliares e iniciantes. 
+                                  De forma simples e intuitiva para esses profissionais, proporcionamos 
+                                  cuidados de qualidade aos animais de estimação no conforto de seus lares, 
+                                  preenchendo uma lacuna no setor tradicional das clínicas.
                                 `}
                             </p>
                         </div>
@@ -130,7 +128,7 @@ const HomePage = () => {
                     <Slide left>
                         <div className="col-span-1">
                             <img
-                                src="/landing-page-02.webp"
+                                src="/icon-pet/cat_secondary.png"
                                 className="w-100 h-[90%] !border-none rounded-3xl"
                                 alt="..."
                             />
@@ -155,75 +153,25 @@ const HomePage = () => {
                         <div className="col-span-1 pt-5 text-center mt-lg-5">
                             <p className="p-4 font-sans text-lg font-semibold text-white lg:text-2xl">
                                 {`
-                                   PawKeepr é uma solução personalizada para veterinários que oferecem
-                                   cuidados de qualidade diretamente nas residências dos animais de estimação.
+                                   PawKeepr: a solução personalizada para veterinários oferecendo
+                                   cuidados de qualidade em residências de animais de estimação.
                              
                                 `}
                             </p>
                             <p className="p-4 font-sans text-lg font-semibold text-white lg:text-2xl">{`
                                     Nossa plataforma adapta-se às necessidades específicas desses profissionais,
                                     proporcionando usabilidade excepcional, identidade exclusiva e preços
-                                    acessíveis.
+                                    acessíveis, focando totalmente nos melhores cuidados para os bichinhos, em 
+                                    qualquer localidade.
                                 `}</p>
                             <p className="p-4 font-sans text-lg font-semibold text-white lg:text-2xl">{`      
-                                   Compatível com tablets, celulares e computadores, facilita o gerenciamento de
-                                   informações do paciente e a comunicação com os clientes, permitindo que os
-                                   veterinários se concentrem em oferecer os melhores cuidados possíveis, onde
-                                   quer que estejam.`}</p>
-                        </div>
-                    </Zoom>
-                </div>
-            </section>
-
-            <section className="section pb-0 hero-section bg-white">
-                <div className="bg-overlay bg-overlay-pattern" />
-                <div className="grid grid-cols-1 place-items-center md:mt-0 md:grid-cols-2 p-4">
-                    <Zoom>
-                        <div className="col-span-1 pt-5 text-center mt-lg-5">
-                            <p className="text-lg lg:text-xl font-semibold font-sans p-4">{`      
-                                 A PawKeepr é uma startup que resolve um problema significativo para veterinários que
-                                 oferecem atendimento domiciliar a animais de estimação. Tradicionalmente, esses
-                                 profissionais enfrentam dificuldades devido à falta de soluções específicas no mercado.
-                                 `}</p>
-                            <p className="text-lg lg:text-xl font-semibold font-sans p-4">{`      
-                                   A PawKeepr preenche essa lacuna com uma plataforma adaptada, oferecendo
-                                   usabilidade otimizada, identidade única e preço acessível. Isso permite aos veterinários
-                                   domiciliares gerenciar facilmente informações dos pacientes, se comunicar com os
-                                   clientes e melhorar a qualidade dos cuidados.
+                                   Compatível com tablets, celulares e computadores, simplifica o gerenciamento 
+                                   de informações e a comunicação com os clientes, permitindo que os veterinários 
+                                   acessem rapidamente as informações médicas dos pets e sincronizem automaticamente 
+                                   os dados, colaborar eficientemente com os tutores.
                                    `}</p>
-                            <p className="text-lg lg:text-xl font-semibold font-sans p-4">{`      
-                                   Com a PawKeepr, os veterinários podem acessar rapidamente as informações médicas
-                                   dos pets, sincronizar automaticamente os dados, colaborar eficientemente com os
-                                   tutores e focar completamente em oferecer os melhores cuidados possíveis aos
-                                   animais, onde quer que estejam.`}</p>
                         </div>
                     </Zoom>
-
-                    <Slide left>
-                        <div className="col-span-1">
-                            <img
-                                src="/icon-pet/cat_secondary.png"
-                                className="w-100 h-[90%] !border-none rounded-3xl"
-                                alt="..."
-                            />
-                        </div>
-                    </Slide>
-                </div>
-            </section>
-
-            <section className="section bg-primary-500">
-                <div className="bg-overlay bg-overlay-pattern" />
-                <div className="grid grid-cols-1 p-4 mt-5 web:grid-cols-2">
-                    <Slide left>
-                        <div className="col-span-1">
-                            <img
-                                src="/landing-page-01.jpg"
-                                className="w-100"
-                                alt="Landing Page"
-                            />
-                        </div>
-                    </Slide>
-                    <BusinessDifferentials />
                 </div>
             </section>
 
@@ -235,11 +183,9 @@ const HomePage = () => {
                         <Zoom>
                             <p className="text-lg lg:text-2xl font-semibold font-sans p-4">
                                 {`
-                                 Nossa solução resolve o problema de acesso restrito às informações
-                                 médicas dos pets, permitindo compartilhamento fácil entre tutores e
-                                 veterinários. Em resumo, a PawKeepr promove cuidados de qualidade e
-                                 acessíveis por meio de uma abordagem centrada no cliente para o
-                                 compartilhamento de informações médicas.
+                                Em resumo, a PawKeepr promove cuidados de qualidade e acessíveis 
+                                por meio de uma abordagem centrada no cliente para o compartilhamento 
+                                de informações médicas.
                                 `}
                             </p>
                         </Zoom>
@@ -305,14 +251,11 @@ const HomePage = () => {
                             <div className="bg-secondary rounded-xl w-3/4 shadow-md m-2">
                                 <p className="p-4 font-sans text-lg font-semibold text-white lg:text-2xl">
                                     {`
-                                 2. Nossa plataforma oferece uma
-                                 sincronização automática de dados em
-                                 todas as consultas veterinárias,
-                                 garantindo que seus registros estejam
-                                 sempre atualizados e disponíveis para
-                                 consulta imediata, economizando tempo
-                                 e melhorando a eficiência do
-                                 atendimento
+                                 2. Nossa plataforma sincroniza 
+                                automaticamente os dados das consultas, 
+                                garantindo registros sempre atualizados 
+                                e disponíveis, economizando tempo e 
+                                aumentando a eficiência do atendimento.
                                 
                                     `}
                                 </p>
@@ -326,13 +269,10 @@ const HomePage = () => {
                             <div className="bg-secondary rounded-xl w-3/4 shadow-md m-2">
                                 <p className=" p-4 font-sans text-lg font-semibold text-white lg:text-2xl">
                                     {`
-                                 3. Facilitamos a colaboração entre você e
-                                 seus clientes, permitindo que ambos
+                                 3. Facilitamos a colaboração entre veterinário e
+                                 clientes, permitindo que ambos
                                  compartilhem insights e informações
-                                 vitais para o cuidado dos pets,
-                                 promovendo uma abordagem mais
-                                 integrada e holística no tratamento
-                                 animal..
+                                 vitais para o cuidado dos pets.
                                 
                                     `}
                                 </p>
@@ -364,12 +304,11 @@ const HomePage = () => {
                             <div className="bg-secondary rounded-xl w-3/4 shadow-md m-2">
                                 <p className="p-4 font-sans text-lg font-semibold text-white lg:text-2xl">
                                     {`
-                                 4. Investimos pesadamente em
-                                 protocolos de segurança de dados
-                                 para garantir a privacidade e a
-                                 segurança das informações médicas
-                                 dos pets, garantindo que seus
-                                 registros estejam protegidos contra
+                                 4. Investimos significativamente 
+                                 em protocolos de segurança de 
+                                 dados para garantir a privacidade 
+                                 das informações médicas dos pets, 
+                                 protegendo seus registros contra 
                                  acessos não autorizados.
                                 
                                     `}
@@ -384,14 +323,12 @@ const HomePage = () => {
                             <div className="bg-secondary rounded-xl w-3/4 shadow-md m-2">
                                 <p className=" p-4 font-sans text-lg font-semibold text-white lg:text-2xl">
                                     {`
-                                 5 .Com uma interface intuitiva e
-                                 amigável, o PawKeepr oferece uma
-                                 experiência de usuário fluida,
-                                 tornando o gerenciamento de
-                                 informações médicas de pets simples
-                                 e acessível para todos, por um preço
-                                 acessível de apenas $ 0,99 por
-                                 consulta.
+                                 5 .Com uma interface intuitiva e 
+                                amigável, o PawKeepr oferece uma 
+                                experiência de usuário fluida, 
+                                simplificando o gerenciamento de  
+                                informações médicas de pets por 
+                                apenas $0,99 por consulta.
                                 
                                     `}
                                 </p>
