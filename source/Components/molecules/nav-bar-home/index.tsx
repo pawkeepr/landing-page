@@ -14,18 +14,16 @@ export const ButtonsNavBar = () => {
             <BtnLink
                 message="Entre Tutor"
                 className={cn(
-                    'text-gray-500 hover:!bg-secondary-500 !border-secondary-500 border-0  w-fit ',
+                    'text-gray-500  !border-secondary-500 border-0  w-fit ',
                 )}
-                href="/tutor/sign-in"
+                href="https://pawkeepr.app.br/tutor/sign-in"
             >
                 <MdPerson className="w-6 h-6" />
             </BtnLink>
             <BtnLink
                 message="Entre Vet"
-                className={cn(
-                    'border-primary-600 hover:!bg-secondary-500 border-0 w-40',
-                )}
-                href="/veterinary/sign-in"
+                className={cn('border-primary-600  border-0 w-40')}
+                href="https://pawkeepr.app.br/"
             >
                 {/* icon de cadastro */}
                 <FaStethoscope className="w-6 h-4" />
