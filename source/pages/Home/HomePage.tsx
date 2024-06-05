@@ -18,16 +18,16 @@ export const ButtonsNavBar = () => {
     return (
         <div className="flex items-center justify-center w-full gap-2">
             <BtnLink
-                message="Saiba + Tutor"
+                message="Entre Tutor"
                 className="text-gray-500  !border-secondary-500 border-0 w-32 mobile:border-0"
-                href="/tutor"
+                href="https://pawkeepr.app.br/tutor/sign-in"
             >
                 <MdPerson className="w-6 h-6" />
             </BtnLink>
             <BtnLink
-                message="Saiba + Vet"
+                message="Entre Vet"
                 className="w-32 border-0 border-primary-600 mobile:border-0"
-                href="/veterinary"
+                href="https://pawkeepr.app.br/"
             >
                 {/* icon de cadastro */}
                 <FaStethoscope className="w-6 h-4" />
@@ -58,10 +58,8 @@ const HomePage = () => {
                         <div className="col-span-1 pt-5 text-center mt-lg-5">
                             <p className="p-4 font-sans text-lg font-semibold text-white lg:text-2xl">
                                 {`
-                                    Imagine realizar uma consulta completa em no máximo 5 minutos, 
-                                    sem sacrificar a qualidade do atendimento. 
-                                    Com nosso aplicativo inovador, você terá acesso a recursos poderosos 
-                                    na palma da sua mão.
+                                    Imagine realizar uma consulta completa de forma simples e intuitiva, sem que você precise perder tempo aprendendo sobre o aplicativo? 
+                                    Com nosso aplicativo inovador, você terá acesso a recursos poderosos na palma da sua mão.
                                 `}
                             </p>
                             <ButtonsNavBar />
