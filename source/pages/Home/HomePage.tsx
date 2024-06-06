@@ -10,11 +10,13 @@ import Zoom from "react-reveal/Zoom";
 import HeaderTitle from "~/Components/atoms/header-title";
 import NavbarHome from "~/Components/molecules/nav-bar-home";
 import Footer from "~/Layouts/Footer";
-import ListingFactory from "~/Components/molecules/listing-factory/listing-factory";
 import { Solutions } from "./solutions";
 import { BusinessDifferentials } from "./business-differentials";
+import { BusinessRoadmap } from "./business-roadmap";
 import { ProblemsFacedByBeginners } from "./problems-faced-by-beginners";
 import { ProblemsFacedByVeterinarians } from "./problems-faced-by-veterinarians";
+import { PricingCard } from "~/Components/molecules/pricing-card";
+import { ReasonsToUse } from "./reasons-to-use";
 
 export const ButtonsNavBar = () => {
     return (
@@ -58,7 +60,7 @@ const HomePage = () => {
                     </Slide>
                     <Zoom>
                         <div className="col-span-1 pt-5 text-center mt-lg-5">
-                            <p className="p-4 font-sans text-lg font-semibold text-white lg:text-2xl">
+                            <p className="p-4 font-sans text-lg font-semibold text-white web:text-2xl">
                                 {`
                                     Imagine realizar uma consulta completa em no máximo 5 minutos, 
                                     sem sacrificar a qualidade do atendimento. 
@@ -77,10 +79,10 @@ const HomePage = () => {
 
             <section className="section pb-0 hero-section bg-white">
                 <div className="bg-overlay bg-overlay-pattern" />
-                <div className="grid grid-cols-1 place-items-center md:mt-0 md:grid-cols-2 p-4">
+                <div className="grid mobile:grid-cols-1 place-items-center tablet:mt-0 grid-cols-2 p-4">
                     <Zoom>
                         <div className="flex items-center text-center col-span-1">
-                            <p className="text-lg lg:text-2xl font-semibold font-sans p-4">
+                            <p className="text-lg web:text-2xl font-semibold font-sans p-4">
                                 {`
                                   Nossa startup preenche uma lacuna no mercado, fornecendo uma
                                   plataforma adaptada para médicos veterinários que atendem a domicílio e
@@ -123,7 +125,7 @@ const HomePage = () => {
 
             <section className="section pb-0 hero-section bg-white">
                 <div className="bg-overlay bg-overlay-pattern" />
-                <div className="grid grid-cols-1 place-items-center md:mt-0 md:grid-cols-2 p-4">
+                <div className="grid phone:grid-cols-1 place-items-center mt-0 grid-cols-2 p-4">
                     <div className="flex items-center text-center col-span-1">
                         <ProblemsFacedByBeginners />
                     </div>
@@ -153,19 +155,19 @@ const HomePage = () => {
                     </Slide>
                     <Zoom>
                         <div className="col-span-1 pt-5 text-center mt-lg-5">
-                            <p className="p-4 font-sans text-lg font-semibold text-white lg:text-2xl">
+                            <p className="p-4 font-sans text-lg font-semibold text-white web:text-2xl">
                                 {`
                                    PawKeepr é uma solução personalizada para veterinários que oferecem
                                    cuidados de qualidade diretamente nas residências dos animais de estimação.
                              
                                 `}
                             </p>
-                            <p className="p-4 font-sans text-lg font-semibold text-white lg:text-2xl">{`
+                            <p className="p-4 font-sans text-lg font-semibold text-white web:text-2xl">{`
                                     Nossa plataforma adapta-se às necessidades específicas desses profissionais,
                                     proporcionando usabilidade excepcional, identidade exclusiva e preços
                                     acessíveis.
                                 `}</p>
-                            <p className="p-4 font-sans text-lg font-semibold text-white lg:text-2xl">{`      
+                            <p className="p-4 font-sans text-lg font-semibold text-white web:text-2xl">{`      
                                    Compatível com tablets, celulares e computadores, facilita o gerenciamento de
                                    informações do paciente e a comunicação com os clientes, permitindo que os
                                    veterinários se concentrem em oferecer os melhores cuidados possíveis, onde
@@ -177,21 +179,21 @@ const HomePage = () => {
 
             <section className="section pb-0 hero-section bg-white">
                 <div className="bg-overlay bg-overlay-pattern" />
-                <div className="grid grid-cols-1 place-items-center md:mt-0 md:grid-cols-2 p-4">
+                <div className="grid phone:grid-cols-1 place-items-center mt-0 grid-cols-2 p-4">
                     <Zoom>
                         <div className="col-span-1 pt-5 text-center mt-lg-5">
-                            <p className="text-lg lg:text-xl font-semibold font-sans p-4">{`      
+                            <p className="text-lg web:text-xl font-semibold font-sans p-4">{`      
                                  A PawKeepr é uma startup que resolve um problema significativo para veterinários que
                                  oferecem atendimento domiciliar a animais de estimação. Tradicionalmente, esses
                                  profissionais enfrentam dificuldades devido à falta de soluções específicas no mercado.
                                  `}</p>
-                            <p className="text-lg lg:text-xl font-semibold font-sans p-4">{`      
+                            <p className="text-lg web:text-xl font-semibold font-sans p-4">{`      
                                    A PawKeepr preenche essa lacuna com uma plataforma adaptada, oferecendo
                                    usabilidade otimizada, identidade única e preço acessível. Isso permite aos veterinários
                                    domiciliares gerenciar facilmente informações dos pacientes, se comunicar com os
                                    clientes e melhorar a qualidade dos cuidados.
                                    `}</p>
-                            <p className="text-lg lg:text-xl font-semibold font-sans p-4">{`      
+                            <p className="text-lg web:text-xl font-semibold font-sans p-4">{`      
                                    Com a PawKeepr, os veterinários podem acessar rapidamente as informações médicas
                                    dos pets, sincronizar automaticamente os dados, colaborar eficientemente com os
                                    tutores e focar completamente em oferecer os melhores cuidados possíveis aos
@@ -229,11 +231,11 @@ const HomePage = () => {
 
             <section className="section pb-0 hero-section bg-white">
                 <div className="bg-overlay bg-overlay-pattern" />
-                <div className="grid grid-cols-1 place-items-center md:mt-0 md:grid-cols-2 p-4">
+                <div className="grid phone:grid-cols-1 place-items-center mt-0 grid-cols-2 p-4">
                     <div className="col-span-1 pt-5 text-center mt-lg-5">
                         <Solutions />
                         <Zoom>
-                            <p className="text-lg lg:text-2xl font-semibold font-sans p-4">
+                            <p className="text-lg web:text-2xl font-semibold font-sans p-4">
                                 {`
                                  Nossa solução resolve o problema de acesso restrito às informações
                                  médicas dos pets, permitindo compartilhamento fácil entre tutores e
@@ -257,250 +259,36 @@ const HomePage = () => {
             </section>
 
             <section className="section bg-primary-500">
-                <h2 className="text-center p-1 font-sans text-lg font-semibold text-white lg:text-2xl">
+                <h2 className="text-center p-1 font-sans text-lg font-semibold text-white web:text-2xl">
                     Por que usar?
                 </h2>
                 <div className="bg-overlay bg-overlay-pattern" />
-                <div className="grid grid-cols-1 p-2 tablet:grid-cols-2 web:grid-cols-2">
-                    <Zoom right>
-                        <div className="col-span-1 pt-5 mt-5 text-center mt-lg-5">
-                            <div className="bg-secondary rounded-xl w-4/4 lg:w-3/4 shadow-md m-2">
-                                <p className="p-4 font-sans text-lg font-semibold text-white lg:text-2xl">
-                                    {`
-                                 1. Com nosso app, você terá acesso
-                                 instantâneo às informações médicas
-                                 dos seus pacientes, eliminando a
-                                 espera por transferências de arquivos
-                                 ou consultas adicionais, garantindo
-                                 um atendimento mais eficiente e
-                                 preciso.
-                                
-                                    `}
-                                </p>
-                            </div>
-                        </div>
-                    </Zoom>
-                    <Slide left>
-                        <div className="col-span-1 hidden sm:block md:block lg:block">
-                            <img
-                                src="/bg-three.jpg"
-                                className="w-[75%]"
-                                alt="Landing Page"
-                            />
-                        </div>
-                    </Slide>
-                </div>
-                <div className="grid grid-cols-1 p-2 tablet:grid-cols-2 web:grid-cols-2">
-                    <Slide right>
-                        <div className="col-span-1 hidden sm:block md:block lg:block">
-                            <img
-                                src="/Sem título.jpg"
-                                className="w-100"
-                                alt="Landing Page"
-                            />
-                        </div>
-                    </Slide>
-                    <Zoom left>
-                        <div className="col-span-1 pt-5 text-center mt-lg-5">
-                            <div className="bg-secondary rounded-xl w-4/4 lg:w-3/4 shadow-md m-2">
-                                <p className="p-4 font-sans text-lg font-semibold text-white lg:text-2xl">
-                                    {`
-                                 2. Nossa plataforma oferece uma
-                                 sincronização automática de dados em
-                                 todas as consultas veterinárias,
-                                 garantindo que seus registros estejam
-                                 sempre atualizados e disponíveis para
-                                 consulta imediata, economizando tempo
-                                 e melhorando a eficiência do
-                                 atendimento
-                                
-                                    `}
-                                </p>
-                            </div>
-                        </div>
-                    </Zoom>
-                </div>
-                <div className="grid grid-cols-1 p-2 tablet:grid-cols-2 web:grid-cols-2">
-                    <Zoom right>
-                        <div className="col-span-1 pt-5 text-center mt-lg-5">
-                            <div className="bg-secondary rounded-xl w-4/4 lg:w-3/4 shadow-md m-2">
-                                <p className=" p-4 font-sans text-lg font-semibold text-white lg:text-2xl">
-                                    {`
-                                 3. Facilitamos a colaboração entre você e
-                                 seus clientes, permitindo que ambos
-                                 compartilhem insights e informações
-                                 vitais para o cuidado dos pets,
-                                 promovendo uma abordagem mais
-                                 integrada e holística no tratamento
-                                 animal..
-                                
-                                    `}
-                                </p>
-                            </div>
-                        </div>
-                    </Zoom>
-                    <Slide left>
-                        <div className="col-span-1 hidden sm:block md:block lg:block">
-                            <img
-                                src="/landing-page-01.jpg"
-                                className="w-100"
-                                alt="Landing Page"
-                            />
-                        </div>
-                    </Slide>
-                </div>
-                <div className="grid grid-cols-1 p-2 tablet:grid-cols-2 web:grid-cols-2">
-                    <Slide right>
-                        <div className="col-span-1 hidden sm:block md:block lg:block">
-                            <img
-                                src="/icon-pet/teiu-primary.png"
-                                className="w-[60%]"
-                                alt="Landing Page"
-                            />
-                        </div>
-                    </Slide>
-                    <Zoom left>
-                        <div className="col-span-1 pt-5 text-center mt-lg-5">
-                            <div className="bg-secondary rounded-xl w-4/4 lg:w-3/4 shadow-md m-2">
-                                <p className="p-4 font-sans text-lg font-semibold text-white lg:text-2xl">
-                                    {`
-                                 4. Investimos pesadamente em
-                                 protocolos de segurança de dados
-                                 para garantir a privacidade e a
-                                 segurança das informações médicas
-                                 dos pets, garantindo que seus
-                                 registros estejam protegidos contra
-                                 acessos não autorizados.
-                                
-                                    `}
-                                </p>
-                            </div>
-                        </div>
-                    </Zoom>
-                </div>
-                <div className="grid grid-cols-1 p-2 tablet:grid-cols-2 web:grid-cols-2">
-                    <Zoom right>
-                        <div className="col-span-1 pt-5 text-center mt-lg-5">
-                            <div className="bg-secondary rounded-xl w-4/4 lg:w-3/4 shadow-md m-2">
-                                <p className=" p-4 font-sans text-lg font-semibold text-white lg:text-2xl">
-                                    {`
-                                 5 .Com uma interface intuitiva e
-                                 amigável, o PawKeepr oferece uma
-                                 experiência de usuário fluida,
-                                 tornando o gerenciamento de
-                                 informações médicas de pets simples
-                                 e acessível para todos, por um preço
-                                 acessível de apenas $ 0,99 por
-                                 consulta.
-                                
-                                    `}
-                                </p>
-                            </div>
-                        </div>
-                    </Zoom>
-                    <Slide left>
-                        <div className="col-span-1 hidden sm:block md:block lg:block">
-                            <img
-                                src="/Sem título2.jpg"
-                                className="w-100"
-                                alt="Landing Page"
-                            />
-                        </div>
-                    </Slide>
-                </div>
+                <ReasonsToUse/>
             </section>
 
             <section className="section pb-0 hero-section bg-white">
-                <div className="grid grid-cols-1 p-4 web:grid-cols-2">
-                    <Zoom>
-                        <div className="col-span-1 md:pt-5 text-center md:mt-lg-5">
-                            <p className="p-2 font-sans text-lg font-semibold lg:text-2xl">
-                                {`Roadmap`}
-                            </p>
-                            <div className="md:w-3/6 flex justify-center lg:justify-start">
-                                <div className="bg-primary lg:bg-secondary rounded-xl shadow-md m-2">
-                                    <p className="p-3 font-sans text-md font-semibold text-white lg:text-xl">
-                                        {`Inteligência Artificial Abril de 2025`}
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="lg:w-4/6 flex justify-center md:justify-center">
-                                <div className="bg-secondary rounded-xl shadow-md m-2">
-                                    <p className=" p-3 font-sans text-md font-semibold text-white lg:text-xl">
-                                        {`VetMovel e Telemedicina Dezembro de 2024`}
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="lg:w-5/6 md:w-5/6 flex justify-center md:justify-end">
-                                <div className="bg-primary lg:bg-secondary rounded-xl shadow-md m-2">
-                                    <p className=" p-3 font-sans text-md font-semibold text-white lg:text-xl">
-                                        {`Secretaria Inteligente Agosto de 2024`}
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="flex justify-center md:justify-end">
-                                <div className="bg-secondary rounded-xl shadow-md m-2">
-                                    <p className=" p-3 font-sans text-md font-semibold text-white lg:text-xl">
-                                        {`Consultas veterinárias Abril de 2024`}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </Zoom>
-                    <Slide left>
-                        <div className="col-span-1">
-                            <img
-                                src="/Sem título2.jpg"
-                                className="w-100"
-                                alt="Landing Page"
-                            />
-                        </div>
-                    </Slide>
-                </div>
+                <BusinessRoadmap />
             </section>
 
             <section className="section bg-primary-500">
                 <div className="bg-overlay bg-overlay-pattern" />
-                <div className="grid gap-4 md:gap-0 grid-cols-1 p-4 mt-5 tablet:grid-cols-2 web:grid-cols-2">
+                <div className="grid gap-4 phone:grid-cols-1 p-4 mt-5 grid-cols-2">
                     <Slide left>
-                        <div className="col-span-1 rounded-md">
-                            <div className="flex justify-center">
-                                <div className="bg-white flex flex-col gap-4 items-center justify-center rounded-lg p-4 w-3/4 tablet:w-3/4 md:w-1/2 h-[400px]">
-                                    <h3 className="text-5xl text-gray-500">
-                                        Grátis
-                                    </h3>
-                                    <p className="text-4xl text-primary">
-                                        $ 0,00
-                                    </p>
-                                    <p className="text-xl">
-                                        Faça 30 consultas grátis
-                                    </p>
-                                    <p className="text-md">
-                                        Tenha acesso a todos os recursos sem
-                                        limitação
-                                    </p>
-                                </div>
-                            </div>
+                        <div className="col-span-1">
+                            <PricingCard
+                                title="Grátis"
+                                price="0,00"
+                                subtitle="Faça 30 consultas grátis"
+                                details="Tenha acesso a todos os recursos sem limitação"
+                            />
                         </div>
                         <div className="col-span-1">
-                            <div className="flex justify-center">
-                                <div className="bg-white flex flex-col gap-4 items-center justify-center rounded-lg p-4 w-3/4 tablet:w-3/4 md:w-1/2 h-[400px]">
-                                    <h3 className="text-5xl text-gray-500">
-                                        Premium
-                                    </h3>
-                                    <p className="text-4xl text-primary">
-                                        $ 0,99
-                                    </p>
-                                    <p className="text-xl text-gray-700">
-                                        Pague menos de 1 dólar por consulta
-                                        realizada.
-                                    </p>
-                                    <p className="text-md text-gray-700">
-                                        Tenha acesso a todos os recursos sem
-                                        limitação
-                                    </p>
-                                </div>
-                            </div>
+                            <PricingCard
+                                title="Premium"
+                                price="0,99"
+                                subtitle="Pague menos de 1 dólar por consulta realizada."
+                                details="Tenha acesso a todos os recursos sem limitação"
+                            />
                         </div>
                     </Slide>
                 </div>
