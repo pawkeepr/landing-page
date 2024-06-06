@@ -14,18 +14,16 @@ export const ButtonsNavBar = () => {
             <BtnLink
                 message="Entre Tutor"
                 className={cn(
-                    'text-gray-500 hover:!bg-secondary-500 !border-secondary-500 border-0  w-fit ',
+                    'text-gray-500  !border-secondary-500 border-0  w-fit ',
                 )}
-                href="/tutor/sign-in"
+                href="https://pawkeepr.app.br/tutor/sign-in"
             >
                 <MdPerson className="w-6 h-6" />
             </BtnLink>
             <BtnLink
                 message="Entre Vet"
-                className={cn(
-                    'border-primary-600 hover:!bg-secondary-500 border-0 w-40',
-                )}
-                href="/veterinary/sign-in"
+                className={cn('border-primary-600  border-0 w-40')}
+                href="https://pawkeepr.app.br/"
             >
                 {/* icon de cadastro */}
                 <FaStethoscope className="w-6 h-4" />
@@ -60,22 +58,22 @@ const NavbarHome = () => {
                 className="fixed z-50 left-0 right-0 mobile:p-2 px-4 py-2 transition-colors data-[scroll-action=true]:bg-white"
                 data-scroll-action={actionScroll}
             >
-                <div className="container flex flex-wrap justify-center gap-2 md:gap-0 md:justify-between">
+                <div className="container flex flex-wrap items-center justify-center gap-2 ">
                     <Link href="/">
                         <img
                             src="/logo-rgb-04.png"
-                            className="hidden h-12 w-40  data-[logo-light=false]:flex"
+                            className="hidden h-10 w-32  data-[logo-light=false]:flex"
                             data-logo-light={actionScroll}
                             alt="logo light"
                         />
                         <img
                             src="/logo-rgb-21.png"
-                            className="hidden h-12 w-40 data-[logo-light=true]:flex"
+                            className="hidden h-10 w-32 data-[logo-light=true]:flex"
                             data-logo-light={actionScroll}
                             alt="logo dark"
                         />
                     </Link>
-                    <ButtonsNavBar />
+                    {/* <ButtonsNavBar /> */}
 
                     {/* </Collapse> */}
                 </div>

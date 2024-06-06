@@ -3,28 +3,27 @@
 
 import cn from 'classnames'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { FiLogIn, FiUserPlus } from 'react-icons/fi' // Ícone de Login
 import { BtnLink } from '~/Components/atoms/btn'
 
 export const ButtonsNavBar = () => {
+    const pathname = usePathname()
+
     return (
         <div className="z-50 flex gap-2">
             <BtnLink
                 message="Entrar"
-                className={cn(
-                    'text-gray-500 hover:!bg-secondary-500 !border-secondary-500 border-0 ',
-                )}
-                href="/veterinary/sign-in"
+                className={cn('text-gray-500 !border-secondary-500 border-0 ')}
+                href={`https://pawkeepr.app.br${pathname}/sign-in`}
             >
                 <FiLogIn className="w-6 h-6" />
             </BtnLink>
             <BtnLink
                 message="Criar Conta"
-                className={cn(
-                    'border-primary-600 hover:!bg-secondary-500 border-0',
-                )}
-                href="/veterinary/sign-up"
+                className={cn('border-primary-600  border-0')}
+                href={`https://pawkeepr.app.br${pathname}/sign-up`}
             >
                 {/* icon de cadastro */}
                 <FiUserPlus className="w-6 h-6" />
