@@ -48,7 +48,7 @@ const HomePage = () => {
                     <Slide left>
                         <div className="col-span-1">
                             <img
-                                src="/landing-page-01.jpg"
+                                src="\home\ilustracao5.png"
                                 className="w-100"
                                 alt="Landing Page"
                             />
