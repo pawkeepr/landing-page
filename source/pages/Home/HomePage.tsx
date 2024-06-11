@@ -3,7 +3,6 @@
 
 import { BtnLink } from '~/Components/atoms/btn'
 
-import { FaStethoscope } from 'react-icons/fa'
 import { MdPerson } from 'react-icons/md'
 import Slide from 'react-reveal/Slide'
 import Zoom from 'react-reveal/Zoom'
@@ -27,14 +26,6 @@ export const ButtonsNavBar = () => {
                 href="https://pawkeepr.app.br/tutor/sign-in"
             >
                 <MdPerson className="w-6 h-6" />
-            </BtnLink>
-            <BtnLink
-                message="Entre Vet"
-                className="w-32 border-0 border-primary-600 mobile:border-0"
-                href="https://pawkeepr.app.br/"
-            >
-                {/* icon de cadastro */}
-                <FaStethoscope className="w-6 h-4" />
             </BtnLink>
         </div>
     )
