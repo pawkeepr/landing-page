@@ -72,7 +72,7 @@ const HomePage = () => {
                     </Slide>
                     <Zoom>
                         <div className="col-span-1 pt-10 pr-4 mt-5 pl-9">
-                            <h1 className="pt-10 font-sans text-4xl font-bold text-left text-white  lg:text-4xl">
+                            <h1 className="pt-10 font-sans text-4xl font-bold text-left text-white lg:text-4xl">
                                 Descubra a simplicidade
                                 <br />e o poder de seus atendimentos!
                             </h1>
@@ -88,7 +88,7 @@ const HomePage = () => {
                     </Zoom>
                 </div>
                 <div className="relative z-20 flex flex-col items-center justify-end h-full">
-                    <h1 className="pb-2 font-sans text-5xl font-bold text-white  lg:text-5xl">
+                    <h1 className="pb-2 font-sans text-5xl font-bold text-white lg:text-5xl">
                         Qual é o nosso
                     </h1>
                 </div>
