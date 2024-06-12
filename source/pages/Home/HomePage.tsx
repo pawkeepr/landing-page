@@ -16,17 +16,17 @@ import { Solutions } from './solutions'
 
 export const ButtonsNavBar = () => {
     return (
-        <div className="flex items-center justify-center w-full gap-2">
+        <div className="flex items-center justify-center px-20 gap-36">
             <BtnLink
                 message="Entre Tutor"
-                className="text-gray-500  !border-secondary-500 border-0 w-32 mobile:border-0"
+                className="text-black  border-gray-950 hover:bg-yellow-400 rounded-3xl border-3 w-32 mobile:border-3 text-lg"
                 href="https://pawkeepr.app.br/tutor/sign-in"
             >
                 <MdPerson className="w-6 h-6" />
             </BtnLink>
             <BtnLink
                 message="Entre Vet"
-                className="w-32 border-0 border-primary-600 mobile:border-0"
+                className="rounded-3xl border-3 border-gray-950 hover:bg-gray-600 mobile:border-3 text-lg"
                 href="https://pawkeepr.app.br/"
             >
                 {/* icon de cadastro */}
@@ -40,31 +40,40 @@ const HomePage = () => {
     return (
         <>
             <NavbarHome />
-            <section className="min-h-screen section bg-primary-500" id="hero">
+            <section className="bg-primary-500 pt-16" id="hero">
                 <HeaderTitle title="HOME" />
-                <div className="bg-overlay bg-overlay-pattern" />
+                <div className=" bg-overlay-pattern" />
 
-                <div className="grid grid-cols-1 p-4 mt-5 web:grid-cols-2">
+                <div className="grid grid-cols-1 px-4 m-0 web:grid-cols-2">
                     <Slide left>
                         <div className="col-span-1">
                             <img
                                 src="\home\ilustracao5.png"
-                                className="w-100"
+                                className="w-8/12 ml-24 mt-3"
                                 alt="Landing Page"
                             />
                         </div>
                     </Slide>
                     <Zoom>
-                        <div className="col-span-1 pt-5 text-center mt-lg-5">
-                            <p className="p-4 font-sans text-lg font-semibold text-white lg:text-2xl">
+                        <div className="col-span-1 pl-9 pr-4 pt-10 mt-5">
+                            <h1 className=" pt-10 font-sans text-4xl font-bold text-white lg:text-4xl text-left">
+                                    Descubra a simplicidade<br/>
+                                    e o poder de seus atendimentos!
+                            </h1>
+                            <p className="pb-4 pt-2 font-sans text-lg font-semibold text-white lg:text-2xl text-left">
                                 {`
-                                    Imagine realizar uma consulta completa de forma simples e intuitiva, sem que você precise perder tempo aprendendo sobre o aplicativo? 
-                                    Com nosso aplicativo inovador, você terá acesso a recursos poderosos na palma da sua mão.
+                                    Imagine realizar uma consulta completa de forma simples e intuitiva, 
+                                    sem que você precise perder tempo aprendendo sobre o aplicativo? 
+                                    Com nosso aplicativo inovador, você terá acesso a recursos poderosos 
+                                    na palma da sua mão.
                                 `}
                             </p>
                             <ButtonsNavBar />
                         </div>
                     </Zoom>
+                </div>
+                <div className="flex flex-col items-center justify-end h-full">
+                    <h1 className = " pb-2 font-sans text-5xl font-bold text-white lg:text-5xl">Qual é o nosso</h1>
                 </div>
                 <div className="fixed inset-x-0 bottom-0">
                     <Footer />
