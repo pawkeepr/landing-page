@@ -19,17 +19,16 @@ export const ButtonsNavBar = () => {
         <div className="flex items-center justify-center px-20 gap-36">
             <BtnLink
                 message="Entre Tutor"
-                className="text-black  border-gray-950 hover:bg-yellow-400 rounded-3xl border-3 w-32 mobile:border-3 text-lg"
+                className="text-black  border-gray-950 hover:bg-yellow-400 rounded-3xl border-3 w-32 mobile:border-3 text-lg z-50"
                 href="https://pawkeepr.app.br/tutor/sign-in"
             >
                 <MdPerson className="w-6 h-6" />
             </BtnLink>
             <BtnLink
                 message="Entre Vet"
-                className="rounded-3xl border-3 border-gray-950 hover:bg-gray-600 mobile:border-3 text-lg"
+                className="rounded-3xl border-3 border-gray-950 hover:bg-gray-600 mobile:border-3 text-lg z-50"
                 href="https://pawkeepr.app.br/"
             >
-                {/* icon de cadastro */}
                 <FaStethoscope className="w-6 h-4" />
             </BtnLink>
         </div>
@@ -40,11 +39,11 @@ const HomePage = () => {
     return (
         <>
             <NavbarHome />
-            <section className="bg-primary-500 pt-16" id="hero">
+            <section className="bg-primary-500 pt-16 relative" id="hero">
                 <HeaderTitle title="HOME" />
-                <div className=" bg-overlay-pattern" />
+                <div className="bg-overlay-pattern absolute inset-0 z-10"/>
 
-                <div className="grid grid-cols-1 px-4 m-0 web:grid-cols-2">
+                <div className="grid grid-cols-1 px-4 m-0 web:grid-cols-2 relative z-20">
                     <Slide left>
                         <div className="col-span-1">
                             <img
@@ -72,10 +71,10 @@ const HomePage = () => {
                         </div>
                     </Zoom>
                 </div>
-                <div className="flex flex-col items-center justify-end h-full">
+                <div className="flex flex-col items-center justify-end h-full relative z-20">
                     <h1 className = " pb-2 font-sans text-5xl font-bold text-white lg:text-5xl">Qual é o nosso</h1>
                 </div>
-                <div className="fixed inset-x-0 bottom-0">
+                <div className="fixed inset-x-0 bottom-0 z-20">
                     <Footer />
                 </div>
             </section>
@@ -132,12 +131,13 @@ const HomePage = () => {
                 </div>
             </section>
 
-            <section className="pb-0 bg-white section hero-section">
+            <section className="pb-0 bg-white">
                 <div className="bg-overlay bg-overlay-pattern" />
                 <div className="grid grid-cols-1 p-4 place-items-center md:mt-0 md:grid-cols-2">
                     <Zoom>
-                        <div className="flex items-center col-span-1 text-center">
-                            <p className="p-4 font-sans text-lg font-semibold lg:text-2xl">
+                        <div className="pl-4 flex flex-col col-span-1 text-left">
+                            <h1 className="pb-3 font-sans text-5xl text-secondary-500 text-left font-bold lg:text-5xl">Conheça a Pawkeepr</h1>
+                            <p className="font-sans text-lg font-semibold lg:text-2xl">
                                 {`
                                   Nossa startup revoluciona o mercado, oferecendo uma plataforma 
                                   exclusiva para médicos veterinários domiciliares e iniciantes. 
@@ -149,10 +149,10 @@ const HomePage = () => {
                         </div>
                     </Zoom>
                     <Slide left>
-                        <div className="col-span-1">
+                        <div className="flex justify-center items-center col-span-1">
                             <img
-                                src="/landing-page-02.webp"
-                                className="w-100 h-[90%] !border-none rounded-3xl"
+                                src="\home\ilustracao2.png"
+                                className="w-7/12"
                                 alt="..."
                             />
                         </div>
