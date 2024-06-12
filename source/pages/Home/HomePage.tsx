@@ -80,6 +80,58 @@ const HomePage = () => {
                 </div>
             </section>
 
+            <section className="bg-gray-200 pb-14 flex flex-col items-center justify-center">
+                
+                <h1 className = "font-sans pb-12 text-5xl font-bold text-stone-800 lg:text-5xl">Diferencial?</h1>
+                <div className="flex space-x-10">
+                    <Zoom>
+                        <div className="py-12 px-4 flex flex-col rounded-3xl w-80 h-80 bg-white shadow-2xl">
+                            <div className=" pb-2 flex mb-2">
+                                <img src="\home\icon1.png" alt="Ícone" className="w-20 h-20" />
+                                <h2 className="pl-2 text-3xl font-sans font-bold text-black">Prontuário<br/>Atualizado</h2>
+                            </div>
+
+                            <p className="text-lg text-left font-sans font-semibold">
+                            Registros médicos atualizados automaticamente em todas as consultas. Acesse as informações de qualquer lugar.
+                            </p>
+                        </div>
+
+                        <div className="pt-11 pb-12 px-3 flex flex-col rounded-3xl w-80 h-80 bg-white shadow-2xl">
+                            <div className="flex mb-2">
+                                <img src="\home\icon2.png" alt="Ícone" className="w-24 h-24" />
+                                <h2 className="pl-2 pt-2 text-3xl font-sans font-bold text-black">Segurança e<br/>Privacidade</h2>
+                            </div>
+
+                            <p className="text-lg text-left font-sans font-semibold">
+                            Investimos em segurança de dados para garantir a confidencialidade das informações médicas dos animais.
+                            </p>
+                        </div>
+
+                        <div className="py-12 px-4 flex flex-col rounded-3xl w-80 h-80 bg-white shadow-2xl">
+                            <div className=" pb-2 flex mb-2">
+                                <img src="\home\icon3.png" alt="Ícone" className="w-20 h-20" />
+                                <h2 className="pl-3 text-3xl font-sans font-bold text-black">Preços<br/>Acessíveis</h2>
+                            </div>
+
+                            <p className="text-lg text-left font-sans font-semibold">
+                            Marca que reflete os valores dos veterinários, com um modelo de preço acessível, fortalecendo a conexão com os clientes.
+                            </p>
+                        </div>
+                        
+                        <div className="py-12 px-4 flex flex-col rounded-3xl w-80 h-80 bg-white shadow-2xl">
+                            <div className=" pb-2 flex mb-2">
+                                <img src="\home\icon4.png" alt="Ícone" className="w-20 h-20" />
+                                <h2 className="pl-2 text-3xl font-sans font-bold text-black">Aplicação<br/>Responsiva</h2>
+                            </div>
+
+                            <p className="text-lg text-left font-sans font-semibold">
+                            Acesse à PawKeepr em qualquer dispositivo móvel e conte com suporte técnico contínuo e treinamento para maximizar o uso da plataforma.
+                            </p>
+                        </div>
+                    </Zoom>
+                </div>
+            </section>
+
             <section className="pb-0 bg-white section hero-section">
                 <div className="bg-overlay bg-overlay-pattern" />
                 <div className="grid grid-cols-1 p-4 place-items-center md:mt-0 md:grid-cols-2">
