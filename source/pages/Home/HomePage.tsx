@@ -80,7 +80,6 @@ const HomePage = () => {
             </section>
 
             <section className="bg-gray-200 pb-14 flex flex-col items-center justify-center">
-                
                 <h1 className = "font-sans pb-12 text-5xl font-bold text-stone-800 lg:text-5xl">Diferencial?</h1>
                 <div className="flex space-x-10">
                     <Zoom>
@@ -237,55 +236,6 @@ const HomePage = () => {
                 </div>
             </section>
 
-            <section className="pb-0 bg-white section hero-section">
-                <div className="grid grid-cols-1 p-4 web:grid-cols-2">
-                    <Zoom>
-                        <div className="col-span-1 pt-5 text-center mt-lg-5">
-                            <p className="p-2 font-sans text-lg font-semibold lg:text-2xl">
-                                {`Roadmap`}
-                            </p>
-                            <div className="flex justify-start w-3/6">
-                                <div className="m-2 shadow-md bg-secondary rounded-xl">
-                                    <p className="p-3 font-sans text-lg font-semibold text-white lg:text-xl">
-                                        {`Inteligência Artificial Abril de 2025`}
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="flex justify-end w-4/6">
-                                <div className="m-2 shadow-md bg-secondary rounded-xl">
-                                    <p className="p-3 font-sans text-lg font-semibold text-white lg:text-xl">
-                                        {`VetMovel e Telemedicina Dezembro de 2024`}
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="flex justify-end w-5/6">
-                                <div className="m-2 shadow-md bg-secondary rounded-xl">
-                                    <p className="p-3 font-sans text-lg font-semibold text-white lg:text-xl">
-                                        {`Secretaria Inteligente Agosto de 2024`}
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="flex justify-end w-6/6">
-                                <div className="m-2 shadow-md bg-secondary rounded-xl">
-                                    <p className="p-3 font-sans text-lg font-semibold text-white lg:text-xl">
-                                        {`Consultas veterinárias Abril de 2024`}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </Zoom>
-                    <Slide left>
-                        <div className="col-span-1">
-                            <img
-                                src="/Sem título2.jpg"
-                                className="w-100"
-                                alt="Landing Page"
-                            />
-                        </div>
-                    </Slide>
-                </div>
-            </section>
-
             <section className="section bg-primary-500">
                 <div className="bg-overlay bg-overlay-pattern" />
                 <div className="grid grid-cols-1 p-4 mt-5 web:grid-cols-2">
@@ -328,6 +278,53 @@ const HomePage = () => {
                                     </p>
                                 </div>
                             </div>
+                        </div>
+                    </Slide>
+                </div>
+            </section>
+
+            <section className=" pb-12 pt-4 bg-white ">
+                <h1 className = "justify-center pb-8 flex font-sans text-5xl font-bold text-primary-500 lg:text-5xl">Verifique nosso Roadmap</h1>
+                <div className="grid grid-cols-1 py-4 pl-16 pr-12 web:grid-cols-2">
+                    <Zoom>
+                        <div className="col-span-1 text-center space-y-5 mt-lg-5">
+                            <div className="flex justify-start w-4/6">
+                                <div className="m-2 shadow-md bg-secondary rounded-xl">
+                                    <p className="p-3 font-sans text-lg font-semibold text-white lg:text-xl">
+                                        {`Inteligência Artificial Abril de 2025`}
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="flex justify-start w-4/6">
+                                <div className="m-2 shadow-md bg-secondary rounded-xl">
+                                    <p className="p-3 font-sans text-lg font-semibold text-white lg:text-xl">
+                                        {`VetMovel e Telemedicina Dezembro de 2024`}
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="flex justify-start w-5/6">
+                                <div className="m-2 shadow-md bg-secondary rounded-xl">
+                                    <p className="p-3 font-sans text-lg font-semibold text-white lg:text-xl">
+                                        {`Secretaria Inteligente Agosto de 2024`}
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="flex justify-start w-6/6">
+                                <div className="m-2 shadow-md bg-secondary rounded-xl">
+                                    <p className="p-3 font-sans text-lg font-semibold text-white lg:text-xl">
+                                        {`Consultas veterinárias Abril de 2024`}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </Zoom>
+                    <Slide left>
+                        <div className="col-span-1 justify-center flex">
+                            <img
+                                src="/home/ilustracao1.png"
+                                className="w-10/12"
+                                alt="Landing Page"
+                            />
                         </div>
                     </Slide>
                 </div>
