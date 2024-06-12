@@ -136,7 +136,7 @@ const HomePage = () => {
                 <div className="grid grid-cols-1 p-4 place-items-center md:mt-0 md:grid-cols-2">
                     <Zoom>
                         <div className="pl-4 flex flex-col col-span-1 text-left">
-                            <h1 className="pb-3 font-sans text-5xl text-secondary-500 text-left font-bold lg:text-5xl">Conheça a Pawkeepr</h1>
+                            <h1 className="pb-3 font-sans text-4xl text-secondary-500 text-left font-bold lg:text-4xl">Conheça a Pawkeepr</h1>
                             <p className="font-sans text-lg font-semibold lg:text-2xl">
                                 {`
                                   Nossa startup revoluciona o mercado, oferecendo uma plataforma 
@@ -176,17 +176,60 @@ const HomePage = () => {
                 </div>
             </section>
 
-            <section className="pb-0 bg-white section hero-section">
+            <section className="pb-8 bg-white">
                 <div className="bg-overlay bg-overlay-pattern" />
-                <div className="grid grid-cols-1 p-4 place-items-center md:mt-0 md:grid-cols-2">
-                    <div className="flex items-center col-span-1 text-center">
-                        <ProblemsFacedByBeginners />
+                <div className="grid grid-cols-1 px-4 pt-10 place-items-center md:mt-0 md:grid-cols-2">
+                    <div className="flex flex-col col-span-1 text-left">
+                        <p className="pl-1 font-sans text-2xl text-secondary-500 text-left font-bold lg:text-2xl">Plataforma inovadora</p>
+                        <h1 className="pb-4 pt-0 font-sans text-5xl text-primary-500 text-left font-bold lg:text-5xl">Por que usar Pawkeepr?</h1>
+                        <ul className="pl-3  list-none space-y-4">
+                            <li className="flex font-sans font-semibold text-black text-2xl items-center justify-start">
+                                <img src="\home\icon-checked.png" alt="Icon" className="w-5 h-5 mr-2" />
+                                <span>Prontuário atualizado</span>
+                            </li>
+                            <li className="flex font-sans font-semibold text-black text-2xl items-center justify-start">
+                                <img src="\home\icon-checked.png" alt="Icon" className="w-5 h-5 mr-2" />
+                                <span>Atendimento eficiente</span>
+                            </li>
+                            <li className="flex font-sans font-semibold text-black text-2xl items-center justify-start">
+                                <img src="\home\icon-checked.png" alt="Icon" className="w-5 h-5 mr-2" />
+                                <span>Marketing e networking</span>
+                            </li>
+                            <li className="flex font-sans font-semibold text-black text-2xl items-center justify-start">
+                                <img src="\home\icon-checked.png" alt="Icon" className="w-5 h-5 mr-2" />
+                                <span>Administração do Negócio</span>
+                            </li>
+                            <li className="flex font-sans font-semibold text-black text-2xl items-center justify-start">
+                                <img src="\home\icon-checked.png" alt="Icon" className="w-5 h-5 mr-2" />
+                                <span>Compatibilidade móvel</span>
+                            </li>
+                            <li className="flex font-sans font-semibold text-black text-2xl items-center justify-start">
+                                <img src="\home\icon-checked.png" alt="Icon" className="w-5 h-5 mr-2" />
+                                <span>Comunicação facilitada</span>
+                            </li>
+                            <li className="flex font-sans font-semibold text-black text-2xl items-center justify-start">
+                                <img src="\home\icon-checked.png" alt="Icon" className="w-5 h-5 mr-2" />
+                                <span>Segurança de dados</span>
+                            </li>
+                            <li className="flex font-sans font-semibold text-black text-2xl items-center justify-start">
+                                <img src="\home\icon-checked.png" alt="Icon" className="w-5 h-5 mr-2" />
+                                <span>Interface intuitiva</span>
+                            </li>
+                            <li className="flex font-sans font-semibold text-black text-2xl items-center justify-start">
+                                <img src="\home\icon-checked.png" alt="Icon" className="w-5 h-5 mr-2" />
+                                <span>Identidade única</span>
+                            </li>
+                            <li className="flex font-sans font-semibold text-black text-2xl items-center justify-start">
+                                <img src="\home\icon-checked.png" alt="Icon" className="w-5 h-5 mr-2" />
+                                <span>Preço acessível</span>
+                            </li>
+                        </ul>
                     </div>
                     <Slide left>
-                        <div className="col-span-1">
+                        <div className="col-span-1 justify-center items-center flex">
                             <img
-                                src="/icon-pet/cat_secondary.png"
-                                className="w-100 h-[90%] !border-none rounded-3xl"
+                                src="\home\ilustracao4.png"
+                                className="w-10/12"
                                 alt="..."
                             />
                         </div>
