@@ -188,7 +188,7 @@ const HomePage = () => {
 
             <section className="pb-0 bg-white">
                 <div className="bg-overlay bg-overlay-pattern" />
-                <div className="grid grid-cols-2 p-4 mobile:grid-cols-1 place-items-center tablet:mt-0">
+                <div className="grid grid-cols-1 p-4 place-items-center md:mt-0 md:grid-cols-2">
                     <Zoom>
                         <div className="flex flex-col col-span-1 pl-4 text-left">
                             <h1 className="pb-3 font-sans text-4xl font-bold text-left text-secondary-500 lg:text-4xl">
