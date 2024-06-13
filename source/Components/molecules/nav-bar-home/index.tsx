@@ -14,20 +14,19 @@ export const ButtonsNavBar = () => {
             <BtnLink
                 message="Entre Tutor"
                 className={cn(
-                    'text-gray-500  !border-secondary-500 border-0  w-fit ',
+                    'text-black text-base hover:bg-yellow-400 !border-secondary-500 border-0  w-fit ',
                 )}
                 href="https://pawkeepr.app.br/tutor/sign-in"
             >
                 <MdPerson className="w-6 h-6" />
             </BtnLink>
-            <BtnLink
+            {/*<BtnLink
                 message="Entre Vet"
-                className={cn('border-primary-600  border-0 w-40')}
+                className={cn('border-primary-600 text-base hover:bg-gray-600 border-0 w-40')}
                 href="https://pawkeepr.app.br/"
             >
-                {/* icon de cadastro */}
                 <FaStethoscope className="w-6 h-4" />
-            </BtnLink>
+            </BtnLink>*/}
         </div>
     )
 }
@@ -58,7 +57,7 @@ const NavbarHome = () => {
                 className="fixed z-50 left-0 right-0 mobile:p-2 px-4 py-2 transition-colors data-[scroll-action=true]:bg-white"
                 data-scroll-action={actionScroll}
             >
-                <div className="container flex flex-wrap items-center justify-center gap-2 ">
+                <div className="container flex flex-wrap items-center justify-between gap-2 ">
                     <Link href="/">
                         <img
                             src="/logo-rgb-04.png"
@@ -73,7 +72,7 @@ const NavbarHome = () => {
                             alt="logo dark"
                         />
                     </Link>
-                    {/* <ButtonsNavBar /> */}
+                    <ButtonsNavBar />
 
                     {/* </Collapse> */}
                 </div>

@@ -15,7 +15,7 @@ export const ButtonsNavBar = () => {
         <div className="flex items-center justify-center px-60 gap-2">
             <BtnLink
                 message="Entre Tutor"
-                className="text-black  border-gray-950 hover:bg-yellow-400 rounded-3xl border-3 w-32 mobile:border-3 text-lg z-50"
+                className="text-black  border-gray-950 hover:bg-yellow-400 rounded-3xl border-3 w-44 mobile:border-3 text-lg z-50"
                 href="https://pawkeepr.app.br/tutor/sign-in"
             >
                 <MdPerson className="w-6 h-6" />
@@ -63,7 +63,6 @@ const HomePage = () => {
                                     na palma da sua mão.
                                 `}
                             </p>
-                            <ButtonsNavBar />
                         </div>
                     </Zoom>
                 </div>
@@ -146,12 +145,13 @@ const HomePage = () => {
                         </div>
                     </Zoom>
                     <Slide left>
-                        <div className="flex justify-center items-center col-span-1">
+                        <div className="flex flex-col justify-center items-center col-span-1">
                             <img
                                 src="\home\ilustracao2.png"
-                                className="w-7/12"
+                                className="w-7/12 pb-10"
                                 alt="..."
                             />
+                            <ButtonsNavBar />
                         </div>
                     </Slide>
                 </div>
