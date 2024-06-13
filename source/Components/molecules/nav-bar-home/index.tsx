@@ -55,21 +55,20 @@ const NavbarHome = () => {
     return (
         <header>
             <nav
-                className="fixed z-50 left-0 right-0 mobile:p-2 px-4 py-2 transition-colors data-[scroll-action=true]:bg-white"
-                data-scroll-action={actionScroll}
+                className="fixed z-50 left-0 right-0 mobile:p-2 px-4 py-2.5 transition-colors bg-white shadow-xl"
+                // data-scroll-action={actionScroll}
             >
-                <div className="container flex flex-wrap items-center justify-center gap-2 ">
+                <div className="container flex flex-wrap items-center justify-start gap-2 ">
                     <Link href="/">
-                        <img
+                        {/*<img
                             src="/logo-rgb-04.png"
                             className="hidden h-10 w-32  data-[logo-light=false]:flex"
                             data-logo-light={actionScroll}
                             alt="logo light"
-                        />
+                        />*/}
                         <img
                             src="/logo-rgb-21.png"
-                            className="hidden h-10 w-32 data-[logo-light=true]:flex"
-                            data-logo-light={actionScroll}
+                            className="h-10 w-32 "
                             alt="logo dark"
                         />
                     </Link>
