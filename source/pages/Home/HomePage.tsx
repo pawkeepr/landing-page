@@ -15,7 +15,7 @@ export const ButtonsNavBar = () => {
         <div className="flex items-center justify-center px-20 gap-36">
             <BtnLink
                 message="Entre Tutor"
-                className="z-50 w-32 text-lg text-black border-gray-950 hover:bg-yellow-400 rounded-3xl border-3 mobile:border-3"
+                className="z-50 w-32 text-lg text-black border-gray-950 hover:bg-secondary-500 rounded-3xl border-1 mobile:border-1"
                 href="https://pawkeepr.app.br/tutor/sign-in"
             >
                 <MdPerson className="w-6 h-6" />
@@ -36,7 +36,7 @@ const HomePage = () => {
         <>
             <NavbarHome />
             <section className="relative pt-16 bg-primary-500" id="hero">
-                <HeaderTitle title="HOME" />
+                <HeaderTitle title="Principal" />
                 <div className="absolute inset-0 z-10 bg-overlay-pattern" />
 
                 <div className="relative z-20 grid grid-cols-1 px-4 m-0 web:grid-cols-2">
