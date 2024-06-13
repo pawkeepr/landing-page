@@ -159,7 +159,7 @@ const HomePage = () => {
                 </div>
             </section>
 
-            <section className="section bg-primary-500">
+            {/*<section className="section bg-primary-500">
                 <div className="bg-overlay bg-overlay-pattern" />
                 <div className="grid grid-cols-1 p-4 mt-5 web:grid-cols-2">
                     <Slide left>
@@ -173,7 +173,7 @@ const HomePage = () => {
                     </Slide>
                     <ProblemsFacedByVeterinarians />
                 </div>
-            </section>
+            </section>*/}
 
             <section className="pb-8 bg-white">
                 <div className="bg-overlay bg-overlay-pattern" />
