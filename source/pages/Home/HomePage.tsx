@@ -236,7 +236,7 @@ const HomePage = () => {
                 </div>
             </section>
 
-            <section className="section bg-primary-500">
+            {/*<section className="section bg-primary-500">
                 <div className="bg-overlay bg-overlay-pattern" />
                 <div className="grid grid-cols-1 p-4 mt-5 web:grid-cols-2">
                     <Slide left>
@@ -281,7 +281,7 @@ const HomePage = () => {
                         </div>
                     </Slide>
                 </div>
-            </section>
+            </section>*/}
 
             <section className=" pb-12 pt-4 bg-white ">
                 <h1 className = "justify-center pb-8 flex font-sans text-5xl font-bold text-primary-500 lg:text-5xl">Verifique nosso Roadmap</h1>
