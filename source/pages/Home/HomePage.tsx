@@ -342,54 +342,32 @@ const HomePage = () => {
                 </div>
             </section>
 
-            {/*<section className="pt-4 pb-12 bg-white ">
-                <h1 className="flex justify-center pb-8 font-sans text-5xl font-bold text-primary-500 lg:text-5xl">
-                    Verifique nosso Roadmap
+            <section className="pt-4 pb-12 bg-white ">
+                <h1 className="flex justify-center font-sans text-5xl font-bold text-black lg:text-5xl">
+                    Conheça a Tagkeepr
                 </h1>
                 <div className="grid grid-cols-1 py-4 pl-16 pr-12 web:grid-cols-2">
                     <Zoom>
-                        <div className="col-span-1 text-center space-y-5 mt-lg-5">
-                            <div className="flex justify-start w-4/6">
-                                <div className="m-2 shadow-md bg-secondary rounded-xl">
-                                    <p className="p-3 font-sans text-lg font-semibold text-white lg:text-xl">
-                                        {`Inteligência Artificial Abril de 2025`}
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="flex justify-start w-4/6">
-                                <div className="m-2 shadow-md bg-secondary rounded-xl">
-                                    <p className="p-3 font-sans text-lg font-semibold text-white lg:text-xl">
-                                        {`VetMovel e Telemedicina Dezembro de 2024`}
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="flex justify-start w-5/6">
-                                <div className="m-2 shadow-md bg-secondary rounded-xl">
-                                    <p className="p-3 font-sans text-lg font-semibold text-white lg:text-xl">
-                                        {`Secretaria Inteligente Agosto de 2024`}
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="flex justify-start w-6/6">
-                                <div className="m-2 shadow-md bg-secondary rounded-xl">
-                                    <p className="p-3 font-sans text-lg font-semibold text-white lg:text-xl">
-                                        {`Consultas veterinárias Abril de 2024`}
-                                    </p>
-                                </div>
-                            </div>
+                        <div className="flex flex-col justify-center items-center">
+                            <h1 className="pt-4 text-4xl font-sans font-bold text-primary-500">Traga mais segurança para<br/>o seu pet!</h1>
+                            <p className="py-3 px-32 font-sans text-xl font-semibold text-justify text-black lg:text-2xl">
+                            Imprima a TagKeepr e use-a em sua coleira. Caso ele se perca, quem o encontrar poderá escanear o código,
+                            acessar as informações do seu pet e entrar em contato com você rapidamente.
+                            </p>
+                            <img src="\home\tagkeepr.jpeg" alt="Ícone" className="w-6/12" />
                         </div>
                     </Zoom>
                     <Slide left>
                         <div className="col-span-1 justify-center flex">
                             <img
                                 src="/home/ilustracao1.png"
-                                className="w-10/12"
+                                className="py-12 w-11/12 "
                                 alt="Landing Page"
                             />
                         </div>
                     </Slide>
                 </div>
-            </section>*/}
+            </section>
         </>
     )
 }
