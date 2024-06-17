@@ -14,7 +14,7 @@ export const ButtonsNavBar = () => {
             <BtnLink
                 message="Entre Tutor"
                 className={cn(
-                    'text-black text-base hover:bg-yellow-400 !border-secondary-500 border-0  w-fit ',
+                    'text-black text-base hover:bg-secondary-500 !border-secondary-500 border-0  w-fit ',
                 )}
                 href="https://pawkeepr.app.br/tutor/sign-in"
             >

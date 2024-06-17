@@ -3,6 +3,7 @@
 import { BtnLink } from '~/Components/atoms/btn'
 import { FaStethoscope } from 'react-icons/fa'
 import { MdPerson } from 'react-icons/md'
+import { FaGooglePlay, FaApple } from 'react-icons/fa';
 import Slide from 'react-reveal/Slide'
 import Zoom from 'react-reveal/Zoom'
 import HeaderTitle from '~/Components/atoms/header-title'
@@ -15,7 +16,7 @@ export const ButtonsNavBar = () => {
         <div className="flex items-center justify-center px-60 gap-2">
             <BtnLink
                 message="Entre Tutor"
-                className="text-black  border-gray-950 hover:bg-yellow-400 rounded-3xl border-3 w-44 mobile:border-3 text-lg z-50"
+                className="text-black  border-gray-950 hover:bg-secondary-500 rounded-3xl border-3 w-44 mobile:border-3 text-lg z-50"
                 href="https://pawkeepr.app.br/tutor/sign-in"
             >
                 <MdPerson className="w-6 h-6" />
@@ -30,6 +31,27 @@ export const ButtonsNavBar = () => {
         </div>
     )
 }
+
+{/*export const StoreButtons = () => {
+    return (
+        <div className="flex items-center justify-center gap-8">
+            <BtnLink
+                message="Play Store"
+                className="text-black  border-gray-950 hover:bg-secondary-500 rounded-3xl border-3 w-44 mobile:border-3 text-lg z-50"
+                href="https://pawkeepr.app.br/tutor/sign-in"
+            >
+                <FaGooglePlay className="w-6 h-6" />
+            </BtnLink>
+            <BtnLink
+                message="Aple Store"
+                className="rounded-3xl border-3 text-secondary-500 border-gray-950 hover:bg-gray-600 w-44 mobile:border-3 text-lg z-50"
+                href="https://pawkeepr.app.br/"
+            >
+                <FaApple className="w-6 h-6" />
+            </BtnLink>
+        </div>
+    )
+}*/}
 
 const HomePage = () => {
     return (
@@ -68,9 +90,6 @@ const HomePage = () => {
                 </div>
                 <div className="flex flex-col items-center justify-end h-full relative z-20">
                     <h1 className = " pb-2 font-sans text-5xl font-bold text-white lg:text-5xl">Qual é o nosso</h1>
-                </div>
-                <div className="fixed inset-x-0 bottom-0 z-20">
-                    <Footer />
                 </div>
             </section>
 
@@ -161,10 +180,10 @@ const HomePage = () => {
                 <div className="bg-overlay bg-overlay-pattern" />
                 <div className="grid grid-cols-1 p-4 pt-5 web:grid-cols-2">
                     <Slide left>
-                        <div className="justify-center items-center flex col-span-1">
+                        <div className="justify-center items-center flex flex-col col-span-1">
                             <img
                                 src="/home/ilustracao6.png"
-                                className= "w-10/12 pr-16"
+                                className= "w-10/12 pr-16 pb-8"
                                 alt="Landing Page"
                             />
                         </div>
@@ -324,7 +343,8 @@ const HomePage = () => {
                     <Slide left>
                         <div className="col-span-1">
                             <PricingCard
-                                title="PawClub Free"
+                                titleLine1="PawClub"
+                                titleLine2="Free"
                                 price="0,00"
                                 subtitle="Use a plataforma sem custos"
                                 details="Cadastre seus pets e encontre veterinários"
@@ -332,7 +352,8 @@ const HomePage = () => {
                         </div>
                         <div className="col-span-1">
                             <PricingCard
-                                title="PawClub Benefícios"
+                                titleLine1="PawClub"
+                                titleLine2="Benefícios"
                                 price="60,00"
                                 subtitle="Pague 12x de R$5 ou R$60 anuais"
                                 details="Ajude-nos a manter a plataforma funcionando"
@@ -368,6 +389,9 @@ const HomePage = () => {
                     </Slide>
                 </div>
             </section>
+            <div className="inset-x-0 bottom-0 z-20">
+                <Footer />
+            </div>
         </>
     )
 }
