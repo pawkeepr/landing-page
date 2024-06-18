@@ -1,32 +1,53 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
-
-import { BtnLink } from '~/Components/atoms/btn'
-
+import { FaApple, FaGooglePlay } from 'react-icons/fa'
 import { MdPerson } from 'react-icons/md'
 import Slide from 'react-reveal/Slide'
 import Zoom from 'react-reveal/Zoom'
+import { BtnLink } from '~/Components/atoms/btn'
 import HeaderTitle from '~/Components/atoms/header-title'
 import NavbarHome from '~/Components/molecules/nav-bar-home'
+import { PricingCard } from '~/Components/molecules/pricing-card'
 import Footer from '~/Layouts/Footer'
 
 export const ButtonsNavBar = () => {
     return (
-        <div className="flex items-center justify-center px-20 gap-36">
+        <div className="flex items-center justify-center gap-2 px-60">
             <BtnLink
                 message="Entre Tutor"
-                className="z-50 w-32 text-lg text-black border-gray-950 hover:bg-secondary-500 rounded-3xl border-1 mobile:border-1"
+                className="z-50 text-lg text-black border-gray-950 hover:bg-secondary-500 rounded-3xl border-3 w-44 mobile:border-3"
                 href="https://pawkeepr.app.br/tutor/sign-in"
             >
                 <MdPerson className="w-6 h-6" />
             </BtnLink>
-            {/* <BtnLink
+            {/*<BtnLink
                 message="Entre Vet"
                 className="z-50 text-lg rounded-3xl border-3 border-gray-950 hover:bg-gray-600 mobile:border-3"
                 href="https://pawkeepr.app.br/"
             >
                 <FaStethoscope className="w-6 h-4" />
-            </BtnLink> */}
+            </BtnLink>*/}
+        </div>
+    )
+}
+
+export const StoreButtons = () => {
+    return (
+        <div className="flex items-center justify-center gap-8">
+            <BtnLink
+                message="Play Store"
+                className="z-50 text-lg text-black border-gray-950 hover:bg-secondary-500 rounded-3xl border-3 w-44 mobile:border-3"
+                href="https://pawkeepr.app.br/tutor/sign-in"
+            >
+                <FaGooglePlay className="w-6 h-6" />
+            </BtnLink>
+            <BtnLink
+                message="Aple Store"
+                className="z-50 text-lg rounded-3xl border-3 text-secondary-500 border-gray-950 hover:bg-gray-600 w-44 mobile:border-3"
+                href="https://pawkeepr.app.br/"
+            >
+                <FaApple className="w-6 h-6" />
+            </BtnLink>
         </div>
     )
 }
@@ -36,7 +57,7 @@ const HomePage = () => {
         <>
             <NavbarHome />
             <section className="relative pt-16 bg-primary-500" id="hero">
-                <HeaderTitle title="Principal" />
+                <HeaderTitle title="HOME" />
                 <div className="absolute inset-0 z-10 bg-overlay-pattern" />
 
                 <div className="relative z-20 grid grid-cols-1 px-4 m-0 web:grid-cols-2">
@@ -63,7 +84,6 @@ const HomePage = () => {
                                     na palma da sua mão.
                                 `}
                             </p>
-                            <ButtonsNavBar />
                         </div>
                     </Zoom>
                 </div>
@@ -72,13 +92,10 @@ const HomePage = () => {
                         Qual é o nosso
                     </h1>
                 </div>
-                <div className="fixed inset-x-0 bottom-0 z-20">
-                    <Footer />
-                </div>
             </section>
 
             <section className="flex flex-col items-center justify-center bg-gray-200 pb-14">
-                <h1 className="pb-12 font-sans text-5xl font-bold text-stone-800 lg:text-5xl">
+                <h1 className="pb-10 font-sans text-5xl font-bold text-stone-800 lg:text-5xl">
                     Diferencial?
                 </h1>
                 <div className="flex space-x-10">
@@ -171,7 +188,7 @@ const HomePage = () => {
 
             <section className="pb-0 bg-white">
                 <div className="bg-overlay bg-overlay-pattern" />
-                <div className="grid grid-cols-2 p-4 mobile:grid-cols-1 place-items-center tablet:mt-0">
+                <div className="grid grid-cols-1 p-4 place-items-center md:mt-0 md:grid-cols-2">
                     <Zoom>
                         <div className="flex flex-col col-span-1 pl-4 text-left">
                             <h1 className="pb-3 font-sans text-4xl font-bold text-left text-secondary-500 lg:text-4xl">
@@ -189,42 +206,130 @@ const HomePage = () => {
                         </div>
                     </Zoom>
                     <Slide left>
-                        <div className="flex items-center justify-center col-span-1">
+                        <div className="flex flex-col items-center justify-center col-span-1">
                             <img
                                 src="\home\ilustracao2.png"
-                                className="w-7/12"
+                                className="w-7/12 pb-10"
                                 alt="..."
                             />
+                            <ButtonsNavBar />
                         </div>
                     </Slide>
                 </div>
             </section>
 
-            {/*<section className="section bg-primary-500">
+            <section className="bg-primary-500">
                 <div className="bg-overlay bg-overlay-pattern" />
-                <div className="grid grid-cols-1 p-4 mt-5 web:grid-cols-2">
+                <div className="grid grid-cols-1 p-4 pt-5 web:grid-cols-2">
                     <Slide left>
-                        <div className="col-span-1">
+                        <div className="flex flex-col items-center justify-center col-span-1">
                             <img
-                                src="/landing-page-01.jpg"
-                                className="w-100"
+                                src="/home/ilustracao6.png"
+                                className="w-10/12 pb-8 pr-16"
                                 alt="Landing Page"
                             />
                         </div>
+                        <div className="col-span-1">
+                            <p className="pl-1 font-sans text-2xl font-bold text-left text-secondary-500 lg:text-2xl">
+                                Nossas funcionalidades
+                            </p>
+                            <h1 className="pt-0 pb-4 font-sans text-5xl font-bold text-left text-white lg:text-5xl">
+                                Recursos de ponta disponíveis para a sua
+                                experiência!
+                            </h1>
+                            <div className="flex flex-wrap justify-center gap-10">
+                                {/* Primeiro Tópico */}
+                                <div className="flex flex-col items-center p-6 w-80">
+                                    <div className="flex items-center mb-4">
+                                        <img
+                                            src="/home/icon5.png"
+                                            alt="Ícone"
+                                            className="w-16 h-16 mr-2"
+                                        />
+                                        <h2 className="text-2xl font-bold text-secondary-500">
+                                            Cadastro Pet Ilimitado
+                                        </h2>
+                                    </div>
+                                    <p className="text-lg text-left text-white">
+                                        Cadastre todos os seus pets e compartilhe-os
+                                        entre os membros da família, mantendo seus
+                                        dados atualizados de qualquer lugar.
+                                    </p>
+                                </div>
+
+                                {/* Segundo Tópico */}
+                                <div className="flex flex-col items-center p-6 w-80">
+                                    <div className="flex items-center mb-4">
+                                        <img
+                                            src="/home/icon6.png"
+                                            alt="Ícone"
+                                            className="w-16 h-16 mr-2"
+                                        />
+                                        <h2 className="text-2xl font-bold text-secondary-500">
+                                            Encontre Veterinários
+                                        </h2>
+                                    </div>
+                                    <p className="text-lg text-left text-white">
+                                        Encontre veterinários perto de você e
+                                        escolha o melhor profissional para o seu
+                                        bichinho, incluindo opções de telemedicina
+                                        para consultas virtuais.
+                                    </p>
+                                </div>
+
+                                {/* Terceiro Tópico */}
+                                <div className="flex flex-col items-center p-6 w-80">
+                                    <div className="flex items-center mb-4">
+                                        <img
+                                            src="/home/icon7.png"
+                                            alt="Ícone"
+                                            className="w-16 h-16 mr-2"
+                                        />
+                                        <h2 className="text-2xl font-bold text-secondary-500">
+                                            Agendamento de Consultas
+                                        </h2>
+                                    </div>
+                                    <p className="text-lg text-left text-white">
+                                        Agende consultas veterinárias pela
+                                        plataforma, economizando tempo com nossa
+                                        interface intuitiva e amigável
+                                    </p>
+                                </div>
+
+                                {/* Quarto Tópico */}
+                                <div className="flex flex-col items-center p-6 w-80">
+                                    <div className="flex items-center mb-4">
+                                        <img
+                                            src="/home/icon1-yellow.png"
+                                            alt="Ícone"
+                                            className="w-16 h-16 mr-2"
+                                        />
+                                        <h2 className="text-2xl font-bold text-secondary-500">
+                                            Obtenha o Prontuário
+                                        </h2>
+                                    </div>
+                                    <p className="text-lg text-left text-white">
+                                        Nossa plataforma oferece uma sincronização
+                                        automática de dados em todas as consultas
+                                        veterinárias.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </Slide>
-                    <ProblemsFacedByVeterinarians />
                 </div>
-            </section>*/}
+            </section>
 
             <section className="pb-8 bg-white">
                 <div className="bg-overlay bg-overlay-pattern" />
-                <div className="grid grid-cols-1 px-4 pt-10 place-items-center md:mt-0 md:grid-cols-2">
+                <div className="grid grid-cols-1 pt-20 pl-32 md:mt-0 md:grid-cols-2">
                     <div className="flex flex-col col-span-1 text-left">
                         <p className="pl-1 font-sans text-2xl font-bold text-left text-secondary-500 lg:text-2xl">
                             Plataforma inovadora
                         </p>
                         <h1 className="pt-0 pb-4 font-sans text-5xl font-bold text-left text-primary-500 lg:text-5xl">
-                            Por que usar Pawkeepr?
+                            Veterinário, por <br />
+                            que usar Pawkeepr?
                         </h1>
                         <ul className="pl-3 space-y-4 list-none">
                             <li className="flex items-center justify-start font-sans text-2xl font-semibold text-black">
@@ -233,7 +338,7 @@ const HomePage = () => {
                                     alt="Icon"
                                     className="w-5 h-5 mr-2"
                                 />
-                                <span>Prontuário atualizado</span>
+                                <span>Plataforma intuitiva</span>
                             </li>
                             <li className="flex items-center justify-start font-sans text-2xl font-semibold text-black">
                                 <img
@@ -241,7 +346,7 @@ const HomePage = () => {
                                     alt="Icon"
                                     className="w-5 h-5 mr-2"
                                 />
-                                <span>Atendimento eficiente</span>
+                                <span>Melhor atendimento a domicílio</span>
                             </li>
                             <li className="flex items-center justify-start font-sans text-2xl font-semibold text-black">
                                 <img
@@ -265,7 +370,7 @@ const HomePage = () => {
                                     alt="Icon"
                                     className="w-5 h-5 mr-2"
                                 />
-                                <span>Compatibilidade móvel</span>
+                                <span>Atendimento de qualquer aparelho</span>
                             </li>
                             <li className="flex items-center justify-start font-sans text-2xl font-semibold text-black">
                                 <img
@@ -273,39 +378,7 @@ const HomePage = () => {
                                     alt="Icon"
                                     className="w-5 h-5 mr-2"
                                 />
-                                <span>Comunicação facilitada</span>
-                            </li>
-                            <li className="flex items-center justify-start font-sans text-2xl font-semibold text-black">
-                                <img
-                                    src="\home\icon-checked.png"
-                                    alt="Icon"
-                                    className="w-5 h-5 mr-2"
-                                />
-                                <span>Segurança de dados</span>
-                            </li>
-                            <li className="flex items-center justify-start font-sans text-2xl font-semibold text-black">
-                                <img
-                                    src="\home\icon-checked.png"
-                                    alt="Icon"
-                                    className="w-5 h-5 mr-2"
-                                />
-                                <span>Interface intuitiva</span>
-                            </li>
-                            <li className="flex items-center justify-start font-sans text-2xl font-semibold text-black">
-                                <img
-                                    src="\home\icon-checked.png"
-                                    alt="Icon"
-                                    className="w-5 h-5 mr-2"
-                                />
-                                <span>Identidade única</span>
-                            </li>
-                            <li className="flex items-center justify-start font-sans text-2xl font-semibold text-black">
-                                <img
-                                    src="\home\icon-checked.png"
-                                    alt="Icon"
-                                    className="w-5 h-5 mr-2"
-                                />
-                                <span>Preço acessível</span>
+                                <span>Cobre o preço que achar melhor</span>
                             </li>
                         </ul>
                     </div>
@@ -321,78 +394,70 @@ const HomePage = () => {
                 </div>
             </section>
 
-            {/*<section className="section bg-primary-500">
+            <section className="section bg-primary-500">
                 <div className="bg-overlay bg-overlay-pattern" />
-                <div className="grid grid-cols-2 gap-4 p-4 mt-5 phone:grid-cols-1">
+                <div className="grid grid-cols-1 p-4 mt-5 web:grid-cols-2">
                     <Slide left>
                         <div className="col-span-1">
                             <PricingCard
-                                title="Grátis"
+                                titleLine1="PawClub"
+                                titleLine2="Free"
                                 price="0,00"
-                                subtitle="Faça 30 consultas grátis"
-                                details="Tenha acesso a todos os recursos sem limitação"
+                                subtitle="Use a plataforma sem custos"
+                                details="Cadastre seus pets e encontre veterinários"
                             />
                         </div>
                         <div className="col-span-1">
                             <PricingCard
-                                title="Premium"
-                                price="0,99"
-                                subtitle="Pague menos de 1 dólar por consulta realizada."
-                                details="Tenha acesso a todos os recursos sem limitação"
+                                titleLine1="PawClub"
+                                titleLine2="Benefícios"
+                                price="60,00"
+                                subtitle="Pague 12x de R$5 ou R$60 anuais"
+                                details="Ajude-nos a manter a plataforma funcionando"
                             />
                         </div>
                     </Slide>
                 </div>
-            </section>*/}
+            </section>
 
             <section className="pt-4 pb-12 bg-white ">
-                <h1 className="flex justify-center pb-8 font-sans text-5xl font-bold text-primary-500 lg:text-5xl">
-                    Verifique nosso Roadmap
+                <h1 className="flex justify-center font-sans text-5xl font-bold text-black lg:text-5xl">
+                    Conheça a Tagkeepr
                 </h1>
                 <div className="grid grid-cols-1 py-4 pl-16 pr-12 web:grid-cols-2">
                     <Zoom>
-                        <div className="col-span-1 space-y-5 text-center mt-lg-5">
-                            <div className="flex justify-start w-4/6">
-                                <div className="m-2 shadow-md bg-secondary rounded-xl">
-                                    <p className="p-3 font-sans text-lg font-semibold text-white lg:text-xl">
-                                        {`Inteligência Artificial Abril de 2025`}
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="flex justify-start w-4/6">
-                                <div className="m-2 shadow-md bg-secondary rounded-xl">
-                                    <p className="p-3 font-sans text-lg font-semibold text-white lg:text-xl">
-                                        {`VetMovel e Telemedicina Dezembro de 2024`}
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="flex justify-start w-5/6">
-                                <div className="m-2 shadow-md bg-secondary rounded-xl">
-                                    <p className="p-3 font-sans text-lg font-semibold text-white lg:text-xl">
-                                        {`Secretaria Inteligente Agosto de 2024`}
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="flex justify-start w-6/6">
-                                <div className="m-2 shadow-md bg-secondary rounded-xl">
-                                    <p className="p-3 font-sans text-lg font-semibold text-white lg:text-xl">
-                                        {`Consultas veterinárias Abril de 2024`}
-                                    </p>
-                                </div>
-                            </div>
+                        <div className="flex flex-col items-center justify-center">
+                            <h1 className="pt-4 font-sans text-4xl font-bold text-primary-500">
+                                Traga mais segurança para
+                                <br />o seu pet!
+                            </h1>
+                            <p className="px-32 py-3 font-sans text-xl font-semibold text-justify text-black lg:text-2xl">
+                                Imprima a TagKeepr e use-a em sua coleira. Caso ele
+                                se perca, quem o encontrar poderá escanear o código,
+                                acessar as informações do seu pet e entrar em
+                                contato com você rapidamente.
+                            </p>
+                            <img
+                                src="\home\tagkeepr.jpeg"
+                                alt="Ícone"
+                                className="w-6/12"
+                            />
                         </div>
                     </Zoom>
                     <Slide left>
                         <div className="flex justify-center col-span-1">
                             <img
                                 src="/home/ilustracao1.png"
-                                className="w-10/12"
+                                className="w-11/12 py-12 "
                                 alt="Landing Page"
                             />
                         </div>
                     </Slide>
                 </div>
             </section>
+            <div className="inset-x-0 bottom-0 z-20">
+                <Footer />
+            </div>
         </>
     )
 }

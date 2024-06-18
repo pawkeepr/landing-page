@@ -4,7 +4,6 @@
 import cn from 'classnames'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { FaStethoscope } from 'react-icons/fa'
 import { MdPerson } from 'react-icons/md'
 import { BtnLink } from '~/Components/atoms/btn'
 
@@ -14,20 +13,19 @@ export const ButtonsNavBar = () => {
             <BtnLink
                 message="Entre Tutor"
                 className={cn(
-                    'text-gray-500  !border-secondary-500 border-0  w-fit ',
+                    'text-black text-base hover:bg-secondary-500 !border-secondary-500 border-0  w-fit ',
                 )}
                 href="https://pawkeepr.app.br/tutor/sign-in"
             >
                 <MdPerson className="w-6 h-6" />
             </BtnLink>
-            <BtnLink
+            {/*<BtnLink
                 message="Entre Vet"
-                className={cn('border-primary-600  border-0 w-40')}
+                className={cn('border-primary-600 text-base hover:bg-gray-600 border-0 w-40')}
                 href="https://pawkeepr.app.br/"
             >
-                {/* icon de cadastro */}
                 <FaStethoscope className="w-6 h-4" />
-            </BtnLink>
+            </BtnLink>*/}
         </div>
     )
 }
@@ -58,7 +56,7 @@ const NavbarHome = () => {
                 className="fixed z-50 left-0 right-0 mobile:p-2 px-4 py-2.5 transition-colors bg-white shadow-xl"
                 // data-scroll-action={actionScroll}
             >
-                <div className="container flex flex-wrap items-center justify-start gap-2 ">
+                <div className="container flex flex-wrap items-center justify-between gap-2 ">
                     <Link href="/">
                         {/*<img
                             src="/logo-rgb-04.png"
@@ -68,11 +66,11 @@ const NavbarHome = () => {
                         />*/}
                         <img
                             src="/logo-rgb-21.png"
-                            className="h-10 w-32 "
+                            className="w-32 h-10 "
                             alt="logo dark"
                         />
                     </Link>
-                    {/* <ButtonsNavBar /> */}
+                    <ButtonsNavBar />
 
                     {/* </Collapse> */}
                 </div>
