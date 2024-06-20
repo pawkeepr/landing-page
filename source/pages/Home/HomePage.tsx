@@ -15,7 +15,7 @@ export const ButtonsNavBar = () => {
         <div className="flex items-center justify-center gap-2 px-60">
             <BtnLink
                 message="Entre Tutor"
-                className="z-50 text-lg text-black border-gray-950 hover:bg-secondary-500 rounded-3xl border-3 w-44 mobile:border-3"
+                className="z-50 text-lg text-black border-gray-950 hover:bg-secondary-500 rounded-3xl border-3 w-44 mobile:w-52 mobile:border-3"
                 href="https://pawkeepr.app.br/tutor/sign-in"
             >
                 <MdPerson className="w-6 h-6" />
@@ -65,13 +65,13 @@ const HomePage = () => {
                         <div className="col-span-1">
                             <img
                                 src="\home\ilustracao5.png"
-                                className="w-8/12 mt-3 ml-24"
+                                className="w-8/12 mobile:w-10/12 mt-3 mobile:ml-4 web:ml-24"
                                 alt="Landing Page"
                             />
                         </div>
                     </Slide>
                     <Zoom>
-                        <div className="col-span-1 pt-10 pr-4 mt-5 pl-9">
+                        <div className="col-span-1 pt-10 pr-4 mt-5 pl-9 mobile:pt-0 mobile:mt-0">
                             <h1 className="pt-10 font-sans text-4xl font-bold text-left text-white lg:text-4xl">
                                 Descubra a simplicidade
                                 <br />e o poder de seus atendimentos!
@@ -84,6 +84,9 @@ const HomePage = () => {
                                     na palma da sua mão.
                                 `}
                             </p>
+                            {/*<div className='px-28'>
+                                <StoreButtons/>
+                            </div>*/}
                         </div>
                     </Zoom>
                 </div>
@@ -98,7 +101,7 @@ const HomePage = () => {
                 <h1 className="pb-10 font-sans text-5xl font-bold text-stone-800 lg:text-5xl">
                     Diferencial?
                 </h1>
-                <div className="flex space-x-10">
+                <div className="flex flex-col mobile:space-y-10 web:flex-row web:space-x-10">
                     <Zoom>
                         <div className="flex flex-col px-4 py-12 bg-white shadow-2xl rounded-3xl w-80 h-80">
                             <div className="flex pb-2 mb-2 ">
@@ -209,7 +212,7 @@ const HomePage = () => {
                         <div className="flex flex-col items-center justify-center col-span-1">
                             <img
                                 src="\home\ilustracao2.png"
-                                className="w-7/12 pb-10"
+                                className="w-7/12 pb-10 mobile:w-6/12 mobile:pt-8"
                                 alt="..."
                             />
                             <ButtonsNavBar />
@@ -228,6 +231,7 @@ const HomePage = () => {
                                 className="w-10/12 pb-8 pr-16"
                                 alt="Landing Page"
                             />
+                            {/*<StoreButtons/>*/}
                         </div>
                         <div className="col-span-1">
                             <p className="pl-1 font-sans text-2xl font-bold text-left text-secondary-500 lg:text-2xl">
@@ -322,7 +326,7 @@ const HomePage = () => {
 
             <section className="pb-8 bg-white">
                 <div className="bg-overlay bg-overlay-pattern" />
-                <div className="grid grid-cols-1 pt-20 pl-32 md:mt-0 md:grid-cols-2">
+                <div className="grid grid-cols-1 pt-20 pl-32 mobile:pl-4 md:mt-0 md:grid-cols-2">
                     <div className="flex flex-col col-span-1 text-left">
                         <p className="pl-1 font-sans text-2xl font-bold text-left text-secondary-500 lg:text-2xl">
                             Plataforma inovadora
@@ -331,7 +335,7 @@ const HomePage = () => {
                             Veterinário, por <br />
                             que usar Pawkeepr?
                         </h1>
-                        <ul className="pl-3 space-y-4 list-none">
+                        <ul className="pl-3 space-y-4 list-none mobile:pb-8">
                             <li className="flex items-center justify-start font-sans text-2xl font-semibold text-black">
                                 <img
                                     src="\home\icon-checked.png"
@@ -386,7 +390,7 @@ const HomePage = () => {
                         <div className="flex items-center justify-center col-span-1">
                             <img
                                 src="\home\ilustracao4.png"
-                                className="w-10/12"
+                                className="w-10/12 mobile:w-11/12"
                                 alt="..."
                             />
                         </div>
@@ -394,26 +398,28 @@ const HomePage = () => {
                 </div>
             </section>
 
-            <section className="section bg-primary-500">
+            <section className="pb-10 bg-primary-500">
+                <h1 className="flex pt-10 justify-center font-sans text-5xl font-bold text-white lg:text-5xl">
+                    Club de benefícios Pawkeepr
+                </h1>
                 <div className="bg-overlay bg-overlay-pattern" />
-                <div className="grid grid-cols-1 p-4 mt-5 web:grid-cols-2">
+                <div className="grid grid-cols-1 mobile:space-y-10 p-4 mt-5 web:grid-cols-2">
                     <Slide left>
                         <div className="col-span-1">
                             <PricingCard
-                                titleLine1="PawClub"
-                                titleLine2="Free"
+                                title="Club Free"
                                 price="0,00"
-                                subtitle="Use a plataforma sem custos"
-                                details="Cadastre seus pets e encontre veterinários"
+                                subtitle="Use a plataforma gratuitamente"
+                                details1="Cadastre seus pets e encontre veterinários"
                             />
                         </div>
                         <div className="col-span-1">
                             <PricingCard
-                                titleLine1="PawClub"
-                                titleLine2="Benefícios"
-                                price="60,00"
-                                subtitle="Pague 12x de R$5 ou R$60 anuais"
-                                details="Ajude-nos a manter a plataforma funcionando"
+                                title="Club Ally"
+                                price="9,90 por mês"
+                                subtitle="Ajude-nos a manter a plataforma funcionando"
+                                details1="5% de descontos em atendimentos a domicílio"
+                                details2="10% de descontos em atendimentos por telemedicina"
                             />
                         </div>
                     </Slide>

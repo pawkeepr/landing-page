@@ -1,17 +1,17 @@
 type PricingCardProps = {
     price: string
-    titleLine1: string
-    titleLine2: string
+    title: string
     subtitle: string
-    details: string
+    details1: string
+    details2?: string
 }
 
 export const PricingCard = ({
     price,
-    titleLine1,
-    titleLine2,
+    title,
     subtitle,
-    details,
+    details1,
+    details2,
 }: PricingCardProps) => {
     return (
         <>
@@ -19,13 +19,12 @@ export const PricingCard = ({
                 <div className="flex justify-center">
                     <div className="bg-white flex flex-col gap-4 items-center justify-center rounded-lg p-4 mobile:w-3/4 w-1/2 h-[400px] shadow-lg">
                         <h3 className="text-5xl text-center text-gray-500">
-                            {titleLine1}
-                            <br />
-                            {titleLine2}
+                            {title}
                         </h3>
-                        <p className="text-4xl text-primary">{`$${price}`}</p>
-                        <p className="text-xl">{subtitle}</p>
-                        <p className="text-md">{details}</p>
+                        <p className="text-4xl text-primary">{`R$${price}`}</p>
+                        <p className="text-xl text-center">{subtitle}</p>
+                        <p className="text-md text-center">{details1}</p>
+                        {details2 && <p className="text-md text-center">{details2}</p>}
                     </div>
                 </div>
             </div>
