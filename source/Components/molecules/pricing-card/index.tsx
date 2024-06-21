@@ -17,7 +17,7 @@ export const PricingCard = ({
         <>
             <div className="col-span-1 rounded-md">
                 <div className="flex justify-center">
-                    <div className="bg-white flex flex-col gap-4 items-center justify-center rounded-lg p-4 mobile:w-3/4 w-1/2 h-[400px] shadow-lg">
+                    <div className="bg-white flex flex-col gap-4 items-center justify-center rounded-lg p-4 w-11/12 md:w-1/2 h-[400px] shadow-lg">
                         <h3 className="text-5xl text-center text-gray-500">
                             {title}
                         </h3>

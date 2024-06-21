@@ -73,7 +73,7 @@ const HomePage = () => {
                         </Slide>
                         <Zoom>
                             <div className="col-span-1 pt-10 pr-4 mt-5 pl-9 mobile:pt-0 mobile:mt-0">
-                                <h1 className="pt-10 font-sans text-4xl font-bold text-left text-white lg:text-4xl">
+                                <h1 className="pt-10 font-sans text-4xl font-bold text-left text-white mobile:pb-4 lg:text-4xl">
                                     Você tutor, pode transformar o
                                     Cuidado do Seu Pet com o app Pawkeepr!
                                 </h1>
@@ -320,8 +320,10 @@ const HomePage = () => {
                                         </p>
                                     </div>
                                 </div>
-                                <p className=' px-20 py-2 font-sans text-2xl font-semibold text-center text-secondary-500'>Aproveite todos os recursos da plataforma de forma gratuita e contribua para sua manutenção com o clube
-                                de benefícios. </p>
+                                <p className=' md:px-20 py-2 font-sans text-2xl font-semibold text-center text-secondary-500'>
+                                    Aproveite todos os recursos da plataforma de forma gratuita e contribua 
+                                    para sua manutenção com o clubede benefícios. 
+                                </p>
                             </div>
                         </Slide>
                     </div>
@@ -329,7 +331,7 @@ const HomePage = () => {
 
                 <section className="pb-8 bg-white">
                     <div className="bg-overlay bg-overlay-pattern" />
-                    <h1 className="pt-8 px-40 font-sans text-5xl font-bold text-center text-primary-500 mobile:justify-start mobile:px-1 lg:text-5xl">
+                    <h1 className="pt-8 px-40 font-sans text-4xl font-bold text-center text-primary-500 mobile:justify-start mobile:px-4 md:text-5xl">
                         Veterinário, descubra como a Pawkeepr
                         pode transformar seu atendimento domiciliar!                                
                     </h1>
@@ -433,7 +435,7 @@ const HomePage = () => {
                             <div className="flex items-center justify-center col-span-1">
                                 <img
                                     src="\home\ilustracao4.png"
-                                    className="w-10/12 mobile:w-11/12"
+                                    className="md:w-10/12 w-11/12"
                                     alt="..."
                                 />
                             </div>
@@ -442,11 +444,11 @@ const HomePage = () => {
                 </section>
 
                 <section className="pb-10 bg-primary-500">
-                    <h1 className="flex pt-10 justify-center font-sans text-5xl font-bold text-white lg:text-5xl">
+                    <h1 className="flex pt-10 justify-center items-center text-center font-sans text-4xl font-bold text-white md:text-5xl ">
                         Club de benefícios Pawkeepr
                     </h1>
                     <div className="bg-overlay bg-overlay-pattern" />
-                    <div className="grid grid-cols-1 mobile:space-y-10 p-4 mt-5 web:grid-cols-2">
+                    <div className="grid grid-cols-1 mobile:space-y-16 p-4 mt-5 web:grid-cols-2">
                         <Slide left>
                             <div className="col-span-1">
                                 <PricingCard
@@ -470,17 +472,17 @@ const HomePage = () => {
                 </section>
 
                 <section className="pt-4 pb-12 bg-white ">
-                    <h1 className="flex justify-center font-sans text-5xl font-bold text-black lg:text-5xl">
+                    <h1 className="flex justify-center font-sans text-4xl font-bold text-black md:text-5xl">
                         Conheça a Tagkeepr
                     </h1>
                     <div className="grid grid-cols-1 py-4 pl-16 pr-12 web:grid-cols-2">
                         <Zoom>
-                            <div className="flex flex-col items-center justify-center">
-                                <h1 className="pt-4 font-sans text-4xl font-bold text-primary-500">
+                            <div className="flex flex-col items-center justify-center ">
+                                <h1 className="pt-4 font-sans md:px-32 text-3xl md:text-4xl font-bold text-primary-500">
                                     Traga mais segurança para
-                                    <br />o seu pet!
+                                    o seu pet!
                                 </h1>
-                                <p className="px-32 py-3 font-sans text-xl font-semibold text-justify text-black lg:text-2xl">
+                                <p className="md:px-32 py-3 font-sans text-xl font-semibold text-justify text-black lg:text-2xl">
                                     Imprima a TagKeepr e use-a em sua coleira. Caso ele
                                     se perca, quem o encontrar poderá escanear o código,
                                     acessar as informações do seu pet e entrar em
@@ -489,7 +491,7 @@ const HomePage = () => {
                                 <img
                                     src="\home\tagkeepr.jpeg"
                                     alt="Ícone"
-                                    className="w-6/12"
+                                    className="md:w-6/12 w-10/12"
                                 />
                             </div>
                         </Zoom>
@@ -497,7 +499,7 @@ const HomePage = () => {
                             <div className="flex justify-center col-span-1">
                                 <img
                                     src="/home/ilustracao1.png"
-                                    className="w-11/12 py-12 "
+                                    className="w-full md:w-10/12 py-12 "
                                     alt="Landing Page"
                                 />
                             </div>
