@@ -63,10 +63,10 @@ const HomePage = () => {
                 <div className="absolute inset-0 z-10 bg-overlay-pattern" />
 
                 <div className="relative z-20 grid grid-cols-1 px-4 m-0 web:grid-cols-2">
-                    <SlideInSection direction="right">
+                    <SlideInSection>
                         <div className="col-span-1">
                             <img
-                                src="\home\ilustracao5.png"
+                                src="/home/ilustracao5.png"
                                 className="w-8/12 mt-3 mobile:w-10/12 mobile:ml-4 web:ml-24"
                                 alt="Landing Page"
                             />
@@ -219,7 +219,7 @@ const HomePage = () => {
                             </p>
                         </div>
                     </ZoomInSection>
-                    <SlideInSection direction = "right">
+                    <SlideInSection>
                         <div className="flex flex-col items-center justify-center col-span-1">
                             <img
                                 src="\home\ilustracao2.png"
@@ -235,7 +235,7 @@ const HomePage = () => {
             <section className="bg-primary-500">
                 <div className="bg-overlay bg-overlay-pattern" />
                 <div className="grid grid-cols-1 p-4 pt-5 web:grid-cols-2">
-                    <SlideInSection direction='right'>
+                    <SlideInSection>
                         <div className="flex flex-col items-center justify-center col-span-1">
                             <img
                                 src="/home/ilustracao6.png"
@@ -351,7 +351,7 @@ const HomePage = () => {
                     atendimento domiciliar!
                 </h1>
                 <div className="grid grid-cols-1 pt-20 pl-32 mobile:pl-4 md:mt-0 lg:grid-cols-2">
-                    <SlideInSection direction='right'>
+                    <SlideInSection>
                         <div className="flex flex-col col-span-1 text-left">
                             <p className="pl-1 font-sans text-2xl font-bold text-left text-secondary-500 lg:text-2xl">
                                 Plataforma inovadora
@@ -454,7 +454,7 @@ const HomePage = () => {
                         </div>
                     </SlideInSection>
                 
-                    <SlideInSection direction='right'>
+                    <SlideInSection>
                         <div className="flex items-center justify-center col-span-1">
                             <img
                                 src="\home\ilustracao4.png"
@@ -470,8 +470,8 @@ const HomePage = () => {
                 <h1 className="flex items-center justify-center pt-10 font-sans text-4xl font-bold text-center text-white md:text-5xl ">
                     Club de benefícios Pawkeepr
                 </h1>
-                <div className="bg-overlay bg-overlay-pattern" />
-                <SlideInSection direction='right'>
+                <div className="bg-overlay bg-overlay-pattern " />
+                <SlideInSection>
                     <div className="grid grid-cols-1 p-4 mt-5 mobile:space-y-16 web:grid-cols-2">
                         <div className="col-span-1">
                             <PricingCard
@@ -517,7 +517,7 @@ const HomePage = () => {
                             />
                         </div>
                     </ZoomInSection>
-                    <SlideInSection direction='right'>
+                    <SlideInSection>
                         <div className="flex justify-center col-span-1">
                             <img
                                 src="/home/ilustracao1.png"
