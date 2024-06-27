@@ -66,8 +66,8 @@ const HomePage = () => {
                     <SlideInSection>
                         <div className="col-span-1">
                             <img
-                                src="/home/ilustracao5.png"
-                                className="w-8/12 mt-3 mobile:w-10/12 mobile:ml-4 web:ml-24"
+                                src="/home/ilustracao1.png"
+                                className="w-9/12 mt-3 mobile:w-11/12 mobile:ml-4 web:ml-24"
                                 alt="Landing Page"
                             />
                         </div>
@@ -78,7 +78,7 @@ const HomePage = () => {
                                 Você tutor, pode transformar o Cuidado do Seu Pet
                                 com o app Pawkeepr!
                             </h1>
-                            <p className="pt-2 pb-4 font-sans text-lg font-semibold text-left text-white lg:text-2xl">
+                            <p className="pt-2 pb-4 font-sans text-lg font-semibold text-left text-white mobile:mb-5 lg:text-2xl">
                                 {`
                                         Imagine poder gerenciar a saúde do seu pet de forma
                                     simples e intuitiva, sem perder tempo aprendendo a usar
@@ -222,8 +222,8 @@ const HomePage = () => {
                     <SlideInSection>
                         <div className="flex flex-col items-center justify-center col-span-1">
                             <img
-                                src="\home\ilustracao2.png"
-                                className="w-7/12 pb-10 mobile:w-6/12 mobile:pt-8"
+                                src="\home\ilustracao7.png"
+                                className="w-9/12 pb-10 pt-5 mobile:w-6/12 mobile:pt-8"
                                 alt="..."
                             />
                             <ButtonsNavBar />
@@ -236,7 +236,7 @@ const HomePage = () => {
                 <div className="bg-overlay bg-overlay-pattern" />
                 <div className="grid grid-cols-1 p-4 pt-5 web:grid-cols-2">
                     <SlideInSection>
-                        <div className="flex flex-col items-center justify-center col-span-1">
+                        <div className="flex flex-col pt-32 mobile:pt-0 items-center justify-center col-span-1">
                             <img
                                 src="/home/ilustracao6.png"
                                 className="w-full pb-8 pr-16 md:w-10/12"
@@ -457,7 +457,7 @@ const HomePage = () => {
                     <SlideInSection>
                         <div className="flex items-center justify-center col-span-1">
                             <img
-                                src="\home\ilustracao4.png"
+                                src="\home\ilustracao3.png"
                                 className="w-11/12 md:w-10/12"
                                 alt="..."
                             />
@@ -520,8 +520,8 @@ const HomePage = () => {
                     <SlideInSection>
                         <div className="flex justify-center col-span-1">
                             <img
-                                src="/home/ilustracao1.png"
-                                className="w-full py-12 md:w-10/12 "
+                                src="/home/ilustracao5.png"
+                                className="w-full py-12 md:w-9/12 "
                                 alt="Landing Page"
                             />
                         </div>
