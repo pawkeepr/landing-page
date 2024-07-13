@@ -62,8 +62,8 @@ const HomePage = () => {
                 <HeaderTitle title="Sobre nós" />
                 <div className="absolute inset-0 z-10 bg-overlay-pattern" />
 
-                <div className="relative z-20 grid grid-cols-1 px-4 m-0 web:grid-cols-2">
-                    <SlideInSection>
+                <div className="relative z-20 grid grid-cols-1 p-4 m-0 web:grid-cols-2">
+                    <Slide left>
                         <div className="col-span-1">
                             <img
                                 src="/home/ilustracao1.png"
@@ -71,7 +71,7 @@ const HomePage = () => {
                                 alt="Landing Page"
                             />
                         </div>
-                    </SlideInSection>
+                    </Slide>
                     <ZoomInSection>
                         <div className="col-span-1 pt-10 pr-4 mt-5 pl-9 mobile:pt-0 mobile:mt-0">
                             <h1 className="pt-10 font-sans text-4xl font-bold text-left text-white mobile:pb-4 lg:text-4xl">
@@ -90,6 +90,240 @@ const HomePage = () => {
                             {/*<div className='px-28'>
                                     <StoreButtons/>
                                 </div>*/}
+                        </div>
+                    </ZoomInSection>
+                </div>
+            </section>
+
+            <section className="pb-8 bg-white">
+                <div className="bg-overlay bg-overlay-pattern" />
+                <h1 className="px-40 pt-8 font-sans text-4xl font-bold text-center text-primary-500 mobile:justify-start mobile:px-4 md:text-5xl">
+                    Veterinário, descubra como a Pawkeepr pode transformar seu
+                    atendimento domiciliar!
+                </h1>
+                <div className="grid grid-cols-1 pt-20 pl-32 mobile:pl-4 md:mt-0 lg:grid-cols-2">
+                    <Slide left>
+                        <div className="flex flex-col col-span-1 text-left">
+                            <p className="pl-1 font-sans text-2xl font-bold text-left text-secondary-500 lg:text-2xl">
+                                Plataforma inovadora
+                            </p>
+
+                            <div className="space-y-4 mobile:pb-8">
+                                <div className="flex flex-col pt-6 pr-6">
+                                    <div className="flex items-center">
+                                        <img
+                                            src="/home/icon8.png"
+                                            alt="Ícone"
+                                            className="w-16 h-16 mr-2"
+                                        />
+                                        <h2 className="text-2xl font-bold text-primary-500">
+                                            Melhore o atendimento a domicílio
+                                        </h2>
+                                    </div>
+                                    <p className="pl-2 text-lg text-left text-black">
+                                        Facilite consultas domiciliares com acesso a
+                                        prontuários eletrônicos e agendamentos
+                                        diretamente no app, proporcionando um serviço de
+                                        alta qualidade. Com uma interface simples e
+                                        intuitiva.
+                                    </p>
+                                </div>
+
+                                <div className="flex flex-col pt-2 pr-6">
+                                    <div className="flex items-center">
+                                        <img
+                                            src="/home/icon9.png"
+                                            alt="Ícone"
+                                            className="w-16 h-16 mr-2"
+                                        />
+                                        <h2 className="text-2xl font-bold text-primary-500">
+                                            Marketing e networking
+                                        </h2>
+                                    </div>
+                                    <p className="pl-2 text-lg text-left text-black">
+                                        Aumente sua visibilidade e conecte-se com mais
+                                        clientes através da nossa plataforma, melhorando
+                                        seu marketing e expandindo sua rede de contatos.
+                                    </p>
+                                </div>
+
+                                <div className="flex flex-col pt-2 pr-6">
+                                    <div className="flex items-center">
+                                        <img
+                                            src="/home/icon10.png"
+                                            alt="Ícone"
+                                            className="w-16 h-16 mr-2"
+                                        />
+                                        <h2 className="text-2xl font-bold text-primary-500">
+                                            Administração do negócio
+                                        </h2>
+                                    </div>
+                                    <p className="pl-2 text-lg text-left text-black">
+                                        Gerencie sua clínica ou serviço domiciliar com
+                                        ferramentas que ajudam na administração de
+                                        agendamentos, finanças e históricos de
+                                        pacientes.
+                                    </p>
+                                </div>
+
+                                <div className="flex flex-col pt-2 pr-6">
+                                    <div className="flex items-center">
+                                        <img
+                                            src="/home/icon4-green.png"
+                                            alt="Ícone"
+                                            className="w-16 h-16 mr-2"
+                                        />
+                                        <h2 className="text-2xl font-bold text-primary-500">
+                                            Atendimento de qualquer aparelho
+                                        </h2>
+                                    </div>
+                                    <p className="pl-2 text-lg text-left text-black">
+                                        Acesse Pawkeepr de qualquer dispositivo, seja um
+                                        smartphone, tablet ou computador, mantendo sua
+                                        prática móvel e eficiente.
+                                    </p>
+                                </div>
+
+                                <div className="flex flex-col pt-2 pr-6">
+                                    <div className="flex items-center">
+                                        <img
+                                            src="/home/icon3-green.png"
+                                            alt="Ícone"
+                                            className="w-16 h-16 mr-2"
+                                        />
+                                        <h2 className="text-2xl font-bold text-primary-500">
+                                            Cobre o preço que achar melhor
+                                        </h2>
+                                    </div>
+                                    <p className="pl-2 text-lg text-left text-black">
+                                        Tenha total liberdade para definir os preços de
+                                        seus serviços, ajustando conforme a necessidade
+                                        e valorizando seu trabalho.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </Slide>
+                
+                    <Slide right>
+                        <div className="flex items-center web:pt-20 justify-center col-span-1">
+                            <img
+                                src="\home\ilustracao3.png"
+                                className="w-11/12 md:w-10/12"
+                                alt="..."
+                            />
+                        </div>
+                    </Slide>
+                </div>
+            </section>
+
+            <section className="bg-primary-500">
+                <div className="bg-overlay bg-overlay-pattern" />
+                <div className="grid grid-cols-1 p-4 pt-5 web:grid-cols-2">
+                    <Slide left>
+                        <div className="flex flex-col pt-32 mobile:pt-0 items-center justify-center col-span-1">
+                            <img
+                                src="/home/ilustracao6.png"
+                                className="w-full pb-8 pr-16 md:w-10/12"
+                                alt="Landing Page"
+                            />
+                            {/*<StoreButtons/>*/}
+                        </div>
+                    </Slide>
+
+                    <ZoomInSection>
+                        <div className="col-span-1">
+                            <p className="pl-1 font-sans text-2xl font-bold text-left text-secondary-500 lg:text-2xl">
+                                Nossas funcionalidades
+                            </p>
+                            <h1 className="pt-0 pb-4 font-sans text-5xl font-bold text-left text-white lg:text-5xl">
+                                Recursos de ponta disponíveis para a sua
+                                experiência!
+                            </h1>
+                            <div className="flex flex-wrap justify-center gap-10">
+                                {/* Primeiro Tópico */}
+                                <div className="flex flex-col items-center p-6 w-80">
+                                    <div className="flex items-center mb-4">
+                                        <img
+                                            src="/home/icon5.png"
+                                            alt="Ícone"
+                                            className="w-16 h-16 mr-2"
+                                        />
+                                        <h2 className="text-2xl font-bold text-secondary-500">
+                                            Cadastro Pet Ilimitado
+                                        </h2>
+                                    </div>
+                                    <p className="text-lg text-left text-white">
+                                        Cadastre todos os seus pets e compartilhe-os
+                                        entre os membros da família, mantendo seus
+                                        dados atualizados de qualquer lugar.
+                                    </p>
+                                </div>
+
+                                {/* Segundo Tópico */}
+                                <div className="flex flex-col items-center p-6 w-80">
+                                    <div className="flex items-center mb-4">
+                                        <img
+                                            src="/home/icon6.png"
+                                            alt="Ícone"
+                                            className="w-16 h-16 mr-2"
+                                        />
+                                        <h2 className="text-2xl font-bold text-secondary-500">
+                                            Encontre Veterinários
+                                        </h2>
+                                    </div>
+                                    <p className="text-lg text-left text-white">
+                                        Encontre veterinários perto de você e
+                                        escolha o melhor profissional para o seu
+                                        bichinho, incluindo opções de telemedicina
+                                        para consultas virtuais.
+                                    </p>
+                                </div>
+
+                                {/* Terceiro Tópico */}
+                                <div className="flex flex-col items-center p-6 w-80">
+                                    <div className="flex items-center mb-4">
+                                        <img
+                                            src="/home/icon7.png"
+                                            alt="Ícone"
+                                            className="w-16 h-16 mr-2"
+                                        />
+                                        <h2 className="text-2xl font-bold text-secondary-500">
+                                            Agendamento de Consultas
+                                        </h2>
+                                    </div>
+                                    <p className="text-lg text-left text-white">
+                                        Agende consultas veterinárias pela
+                                        plataforma, economizando tempo com nossa
+                                        interface intuitiva e amigável
+                                    </p>
+                                </div>
+
+                                {/* Quarto Tópico */}
+                                <div className="flex flex-col items-center p-6 w-80">
+                                    <div className="flex items-center mb-4">
+                                        <img
+                                            src="/home/icon1-yellow.png"
+                                            alt="Ícone"
+                                            className="w-16 h-16 mr-2"
+                                        />
+                                        <h2 className="text-2xl font-bold text-secondary-500">
+                                            Obtenha o Prontuário
+                                        </h2>
+                                    </div>
+                                    <p className="text-lg text-left text-white">
+                                        Nossa plataforma oferece uma sincronização
+                                        automática de dados em todas as consultas
+                                        veterinárias. Acesse informações atualizadas
+                                        de qualquer hora ou lugar
+                                    </p>
+                                </div>
+                            </div>
+                            <p className="py-2 font-sans text-2xl font-semibold text-center md:px-20 text-secondary-500">
+                                Aproveite todos os recursos da plataforma de forma
+                                gratuita e contribua para sua manutenção com o
+                                clubede benefícios.
+                            </p>
                         </div>
                     </ZoomInSection>
                 </div>
@@ -219,7 +453,7 @@ const HomePage = () => {
                             </p>
                         </div>
                     </ZoomInSection>
-                    <SlideInSection>
+                    <Slide right>
                         <div className="flex flex-col items-center justify-center col-span-1">
                             <img
                                 src="\home\ilustracao7.png"
@@ -228,241 +462,7 @@ const HomePage = () => {
                             />
                             <ButtonsNavBar />
                         </div>
-                    </SlideInSection>
-                </div>
-            </section>
-
-            <section className="bg-primary-500">
-                <div className="bg-overlay bg-overlay-pattern" />
-                <div className="grid grid-cols-1 p-4 pt-5 web:grid-cols-2">
-                    <SlideInSection>
-                        <div className="flex flex-col pt-32 mobile:pt-0 items-center justify-center col-span-1">
-                            <img
-                                src="/home/ilustracao6.png"
-                                className="w-full pb-8 pr-16 md:w-10/12"
-                                alt="Landing Page"
-                            />
-                            {/*<StoreButtons/>*/}
-                        </div>
-                    </SlideInSection>
-
-                    <ZoomInSection>
-                        <div className="col-span-1">
-                            <p className="pl-1 font-sans text-2xl font-bold text-left text-secondary-500 lg:text-2xl">
-                                Nossas funcionalidades
-                            </p>
-                            <h1 className="pt-0 pb-4 font-sans text-5xl font-bold text-left text-white lg:text-5xl">
-                                Recursos de ponta disponíveis para a sua
-                                experiência!
-                            </h1>
-                            <div className="flex flex-wrap justify-center gap-10">
-                                {/* Primeiro Tópico */}
-                                <div className="flex flex-col items-center p-6 w-80">
-                                    <div className="flex items-center mb-4">
-                                        <img
-                                            src="/home/icon5.png"
-                                            alt="Ícone"
-                                            className="w-16 h-16 mr-2"
-                                        />
-                                        <h2 className="text-2xl font-bold text-secondary-500">
-                                            Cadastro Pet Ilimitado
-                                        </h2>
-                                    </div>
-                                    <p className="text-lg text-left text-white">
-                                        Cadastre todos os seus pets e compartilhe-os
-                                        entre os membros da família, mantendo seus
-                                        dados atualizados de qualquer lugar.
-                                    </p>
-                                </div>
-
-                                {/* Segundo Tópico */}
-                                <div className="flex flex-col items-center p-6 w-80">
-                                    <div className="flex items-center mb-4">
-                                        <img
-                                            src="/home/icon6.png"
-                                            alt="Ícone"
-                                            className="w-16 h-16 mr-2"
-                                        />
-                                        <h2 className="text-2xl font-bold text-secondary-500">
-                                            Encontre Veterinários
-                                        </h2>
-                                    </div>
-                                    <p className="text-lg text-left text-white">
-                                        Encontre veterinários perto de você e
-                                        escolha o melhor profissional para o seu
-                                        bichinho, incluindo opções de telemedicina
-                                        para consultas virtuais.
-                                    </p>
-                                </div>
-
-                                {/* Terceiro Tópico */}
-                                <div className="flex flex-col items-center p-6 w-80">
-                                    <div className="flex items-center mb-4">
-                                        <img
-                                            src="/home/icon7.png"
-                                            alt="Ícone"
-                                            className="w-16 h-16 mr-2"
-                                        />
-                                        <h2 className="text-2xl font-bold text-secondary-500">
-                                            Agendamento de Consultas
-                                        </h2>
-                                    </div>
-                                    <p className="text-lg text-left text-white">
-                                        Agende consultas veterinárias pela
-                                        plataforma, economizando tempo com nossa
-                                        interface intuitiva e amigável
-                                    </p>
-                                </div>
-
-                                {/* Quarto Tópico */}
-                                <div className="flex flex-col items-center p-6 w-80">
-                                    <div className="flex items-center mb-4">
-                                        <img
-                                            src="/home/icon1-yellow.png"
-                                            alt="Ícone"
-                                            className="w-16 h-16 mr-2"
-                                        />
-                                        <h2 className="text-2xl font-bold text-secondary-500">
-                                            Obtenha o Prontuário
-                                        </h2>
-                                    </div>
-                                    <p className="text-lg text-left text-white">
-                                        Nossa plataforma oferece uma sincronização
-                                        automática de dados em todas as consultas
-                                        veterinárias. Acesse informações atualizadas
-                                        de qualquer hora ou lugar
-                                    </p>
-                                </div>
-                            </div>
-                            <p className="py-2 font-sans text-2xl font-semibold text-center md:px-20 text-secondary-500">
-                                Aproveite todos os recursos da plataforma de forma
-                                gratuita e contribua para sua manutenção com o
-                                clubede benefícios.
-                            </p>
-                        </div>
-                    </ZoomInSection>
-                </div>
-            </section>
-
-            <section className="pb-8 bg-white">
-                <div className="bg-overlay bg-overlay-pattern" />
-                <h1 className="px-40 pt-8 font-sans text-4xl font-bold text-center text-primary-500 mobile:justify-start mobile:px-4 md:text-5xl">
-                    Veterinário, descubra como a Pawkeepr pode transformar seu
-                    atendimento domiciliar!
-                </h1>
-                <div className="grid grid-cols-1 pt-20 pl-32 mobile:pl-4 md:mt-0 lg:grid-cols-2">
-                    <SlideInSection>
-                        <div className="flex flex-col col-span-1 text-left">
-                            <p className="pl-1 font-sans text-2xl font-bold text-left text-secondary-500 lg:text-2xl">
-                                Plataforma inovadora
-                            </p>
-
-                            <div className="space-y-4 mobile:pb-8">
-                                <div className="flex flex-col pt-6 pr-6">
-                                    <div className="flex items-center">
-                                        <img
-                                            src="/home/icon8.png"
-                                            alt="Ícone"
-                                            className="w-16 h-16 mr-2"
-                                        />
-                                        <h2 className="text-2xl font-bold text-primary-500">
-                                            Melhore o atendimento a domicílio
-                                        </h2>
-                                    </div>
-                                    <p className="pl-2 text-lg text-left text-black">
-                                        Facilite consultas domiciliares com acesso a
-                                        prontuários eletrônicos e agendamentos
-                                        diretamente no app, proporcionando um serviço de
-                                        alta qualidade. Com uma interface simples e
-                                        intuitiva.
-                                    </p>
-                                </div>
-
-                                <div className="flex flex-col pt-2 pr-6">
-                                    <div className="flex items-center">
-                                        <img
-                                            src="/home/icon9.png"
-                                            alt="Ícone"
-                                            className="w-16 h-16 mr-2"
-                                        />
-                                        <h2 className="text-2xl font-bold text-primary-500">
-                                            Marketing e networking
-                                        </h2>
-                                    </div>
-                                    <p className="pl-2 text-lg text-left text-black">
-                                        Aumente sua visibilidade e conecte-se com mais
-                                        clientes através da nossa plataforma, melhorando
-                                        seu marketing e expandindo sua rede de contatos.
-                                    </p>
-                                </div>
-
-                                <div className="flex flex-col pt-2 pr-6">
-                                    <div className="flex items-center">
-                                        <img
-                                            src="/home/icon10.png"
-                                            alt="Ícone"
-                                            className="w-16 h-16 mr-2"
-                                        />
-                                        <h2 className="text-2xl font-bold text-primary-500">
-                                            Administração do negócio
-                                        </h2>
-                                    </div>
-                                    <p className="pl-2 text-lg text-left text-black">
-                                        Gerencie sua clínica ou serviço domiciliar com
-                                        ferramentas que ajudam na administração de
-                                        agendamentos, finanças e históricos de
-                                        pacientes.
-                                    </p>
-                                </div>
-
-                                <div className="flex flex-col pt-2 pr-6">
-                                    <div className="flex items-center">
-                                        <img
-                                            src="/home/icon4-green.png"
-                                            alt="Ícone"
-                                            className="w-16 h-16 mr-2"
-                                        />
-                                        <h2 className="text-2xl font-bold text-primary-500">
-                                            Atendimento de qualquer aparelho
-                                        </h2>
-                                    </div>
-                                    <p className="pl-2 text-lg text-left text-black">
-                                        Acesse Pawkeepr de qualquer dispositivo, seja um
-                                        smartphone, tablet ou computador, mantendo sua
-                                        prática móvel e eficiente.
-                                    </p>
-                                </div>
-
-                                <div className="flex flex-col pt-2 pr-6">
-                                    <div className="flex items-center">
-                                        <img
-                                            src="/home/icon3-green.png"
-                                            alt="Ícone"
-                                            className="w-16 h-16 mr-2"
-                                        />
-                                        <h2 className="text-2xl font-bold text-primary-500">
-                                            Cobre o preço que achar melhor
-                                        </h2>
-                                    </div>
-                                    <p className="pl-2 text-lg text-left text-black">
-                                        Tenha total liberdade para definir os preços de
-                                        seus serviços, ajustando conforme a necessidade
-                                        e valorizando seu trabalho.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </SlideInSection>
-                
-                    <SlideInSection>
-                        <div className="flex items-center justify-center col-span-1">
-                            <img
-                                src="\home\ilustracao3.png"
-                                className="w-11/12 md:w-10/12"
-                                alt="..."
-                            />
-                        </div>
-                    </SlideInSection>
+                    </Slide>
                 </div>
             </section>
 
@@ -471,8 +471,8 @@ const HomePage = () => {
                     Club de benefícios Pawkeepr
                 </h1>
                 <div className="bg-overlay bg-overlay-pattern " />
-                <SlideInSection>
-                    <div className="grid grid-cols-1 p-4 mt-5 mobile:space-y-16 web:grid-cols-2">
+                <Slide left>
+                    <div className="grid grid-cols-1 p-4 mt-5 mobile:space-y-16">
                         <div className="col-span-1">
                             <PricingCard
                                 title="Club Free"
@@ -481,7 +481,7 @@ const HomePage = () => {
                                 details1="Cadastre seus pets e encontre veterinários"
                             />
                         </div>
-                        <div className="col-span-1">
+                        <div className="col-span-1 hidden">
                             <PricingCard
                                 title="Club Ally"
                                 price="9,90 por mês"
@@ -491,7 +491,7 @@ const HomePage = () => {
                             />
                         </div>
                     </div>
-                </SlideInSection>
+                </Slide>
             </section>
 
             <section className="pt-4 pb-12 bg-white ">
@@ -517,7 +517,7 @@ const HomePage = () => {
                             />
                         </div>
                     </ZoomInSection>
-                    <SlideInSection>
+                    <Slide right>
                         <div className="flex justify-center col-span-1">
                             <img
                                 src="/home/ilustracao5.png"
@@ -525,7 +525,7 @@ const HomePage = () => {
                                 alt="Landing Page"
                             />
                         </div>
-                    </SlideInSection>
+                    </Slide>
                 </div>
             </section>
             <div className="inset-x-0 bottom-0 z-20">
