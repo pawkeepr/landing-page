@@ -1,58 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
-import { FaApple, FaGooglePlay } from 'react-icons/fa'
-import { MdPerson } from 'react-icons/md'
+import StoreButtons from './storebuttons'
+import ButtonsTutorVet from './buttons-tutor-vet'
 import Slide from 'react-reveal/Slide'
-import Zoom from 'react-reveal/Zoom'
-import { BtnLink } from '~/Components/atoms/btn'
 import HeaderTitle from '~/Components/atoms/header-title'
-import SlideInSection from '~/Components/atoms/slide'
 import ZoomInSection from '~/Components/atoms/zoom'
 import NavbarHome from '~/Components/molecules/nav-bar-home'
 import { PricingCard } from '~/Components/molecules/pricing-card'
 import Footer from '~/Layouts/Footer'
 
-export const ButtonsNavBar = () => {
-    return (
-        <div className="flex items-center justify-center gap-2 px-60">
-            <BtnLink
-                message="Entre Tutor"
-                className="z-50 text-lg text-black border-gray-950 hover:bg-secondary-500 rounded-3xl border-3 w-44 mobile:w-52 mobile:border-3"
-                href="https://pawkeepr.app.br/tutor/sign-in"
-            >
-                <MdPerson className="w-6 h-6" />
-            </BtnLink>
-            {/*<BtnLink
-                message="Entre Vet"
-                className="z-50 text-lg rounded-3xl border-3 border-gray-950 hover:bg-gray-600 mobile:border-3"
-                href="https://pawkeepr.app.br/"
-            >
-                <FaStethoscope className="w-6 h-4" />
-            </BtnLink>*/}
-        </div>
-    )
-}
-
-export const StoreButtons = () => {
-    return (
-        <div className="flex items-center justify-center gap-8">
-            <BtnLink
-                message="Play Store"
-                className="z-50 text-lg text-black border-gray-950 hover:bg-secondary-500 rounded-3xl border-3 w-44 mobile:border-3"
-                href="https://pawkeepr.app.br/tutor/sign-in"
-            >
-                <FaGooglePlay className="w-6 h-6" />
-            </BtnLink>
-            <BtnLink
-                message="Aple Store"
-                className="z-50 text-lg rounded-3xl border-3 text-secondary-500 border-gray-950 hover:bg-gray-600 w-44 mobile:border-3"
-                href="https://pawkeepr.app.br/"
-            >
-                <FaApple className="w-6 h-6" />
-            </BtnLink>
-        </div>
-    )
-}
 
 const HomePage = () => {
     return (
@@ -460,7 +416,7 @@ const HomePage = () => {
                                 className="w-9/12 pb-10 pt-5 mobile:w-6/12 mobile:pt-8"
                                 alt="..."
                             />
-                            <ButtonsNavBar />
+                            <ButtonsTutorVet />
                         </div>
                     </Slide>
                 </div>

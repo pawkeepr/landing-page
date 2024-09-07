@@ -1,0 +1,1 @@
+export {default} from './buttons-tutor-vet'

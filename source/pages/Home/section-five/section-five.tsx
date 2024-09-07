@@ -1,7 +1,7 @@
 import React from 'react'
 import Slide from 'react-reveal/Slide'
 import ZoomInSection from '~/Components/atoms/zoom'
-import { ButtonsNavBar } from '../HomePage'
+import { ButtonsTutorVet } from '../buttons-tutor-vet/buttons-tutor-vet'
 
 const SectionFive: React.FC = () => {
     return (
@@ -31,7 +31,7 @@ const SectionFive: React.FC = () => {
                                 className="w-9/12 pb-10 pt-5 mobile:w-6/12 mobile:pt-8"
                                 alt="..."
                             />
-                            <ButtonsNavBar />
+                            <ButtonsTutorVet />
                         </div>
                     </Slide>
                 </div>
