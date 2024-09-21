@@ -9,7 +9,7 @@ export const ButtonsTutorVet: React.FC = () => {
             <BtnLink
                 message="Entre Tutor"
                 className="z-50 text-lg text-black border-gray-950 hover:bg-secondary-500 rounded-3xl border-3 w-44 mobile:w-52 mobile:border-3"
-                href="https://pawkeepr.app.br/tutor/sign-in"
+                href="https://tutor.pawkeepr.app.br/t/sign-in"
             >
                 <MdPerson className="w-6 h-6" />
             </BtnLink >
