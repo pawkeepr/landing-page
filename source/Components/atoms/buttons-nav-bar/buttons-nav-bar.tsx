@@ -1,10 +1,8 @@
 'use client'
 import cn from 'classnames'
-import { MdPerson } from "react-icons/md"
-import { BtnLink } from "../btn"
-import { deflate } from 'zlib'
-import React from 'react'
-
+import type React from 'react'
+import { MdPerson } from 'react-icons/md'
+import { BtnLink } from '../btn'
 
 export const ButtonsNavBar: React.FC = () => {
     return (
@@ -14,7 +12,7 @@ export const ButtonsNavBar: React.FC = () => {
                 className={cn(
                     'text-black text-base hover:bg-secondary-500 !border-secondary-500 border-0  w-fit ',
                 )}
-                href="https://pawkeepr.app.br/tutor/sign-in"
+                href="https://tutor.pawkeepr.app.br/t/sign-in"
             >
                 <MdPerson className="w-6 h-6" />
             </BtnLink>

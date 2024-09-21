@@ -7,7 +7,7 @@ export const StoreButtons: React.FC = () => {
             <BtnLink
                 message="Play Store"
                 className="z-50 text-lg text-black border-gray-950 hover:bg-secondary-500 rounded-3xl border-3 w-44 mobile:border-3"
-                href="https://pawkeepr.app.br/tutor/sign-in"
+                href="https://tutor.pawkeepr.app.br/t/sign-in"
                 aria-label="Baixar na Play Store"
             >
                 <FaGooglePlay className="w-6 h-6" />
