@@ -27,54 +27,64 @@ type FooterProps = VariantProps<typeof footer>
 const Footer = ({ bg = 'transparent' }: FooterProps) => {
     return (
         <footer className={footer({ bg })}>
-            <div className="flex items-center justify-between px-6 flex-row mobile:flex-col">
-                <div>
-                    <p className="text-xs text-gray-600 font-semibold">
-                        {new Date().getFullYear()} © PawKeepr Sistema Inteligente
-                        para Pets Inova Simples LTDA. 49.173.821/0001-19
-                    </p>
-                    <p className="text-xs mt-2 text-gray-600 font-semibold">
-                        Rua Riachuelo, 1200, São José, 49015-160 Aracaju.
-                    </p>
-                </div>
-                <div className="gap-2 p-2 h-full">
-                    <Link
-                        href="/privacy-policy"
-                        className="text-xs text-gray-600 font-semibold mx-1 hover:text-secondary-500"
-                    >
-                        Política de Privacidade
-                    </Link>
-                    {' - '}
-                    <Link
-                        href="/service-terms"
-                        className="text-xs text-gray-600 font-semibold mx-1 hover:text-secondary-500"
-                    >
-                        Termos de Uso
-                    </Link>
+            <div className="flex items-center justify-content-center px-6 flex-row mobile:flex-col">
+                <div className="text-center">
+                    <div>
+                        <p className="text-xs text-gray-600 font-semibold" style={{ fontSize: "16px" }}>
+                            {new Date().getFullYear()} © PawKeepr Sistema Inteligente
+                            para Pets Inova Simples LTDA. 49.173.821/0001-19
+                        </p>
+                        <p className="text-xs mt-2 text-gray-600 font-semibold" style={{ fontSize: "16px" }}>
+                            Rua Riachuelo, 1200, São José, 49015-160 Aracaju.
+                        </p>
+                    </div>
+                    <div className="gap-2 p-2 h-full">
+                        <Link
+                            href="/privacy-policy"
+                            className="text-xs text-gray-600 font-semibold mx-1 hover:text-secondary-500"
+                            style={{ fontSize: "16px" }}
+                        >
+                            Política de Privacidade
+                        </Link>
+                        {' - '}
+                        <Link
+                            href="/service-terms"
+                            className="text-xs text-gray-600 font-semibold mx-1 hover:text-secondary-500"
+                            style={{ fontSize: "16px" }}
+                        >
+                            Termos de Uso
+                        </Link>
+                    </div>
                 </div>
                 <div className="flex items-center">
                     <Link
-                        href="#"
+                        href="https://www.instagram.com/pawkeepr.app/"
+                        target="_blank" 
+                        rel="noopener noreferrer"
                         className="mx-2 text-gray-600 transition-colors duration-300 hover:text-primary-600"
                         aria-label="Instagram"
                     >
-                        <FaInstagram size={20} />
+                        <FaInstagram size={30} />
                     </Link>
 
                     <Link
-                        href="#"
+                        href="https://www.facebook.com/mypawkeeper/"
+                        target="_blank" 
+                        rel="noopener noreferrer"
                         className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-primary-600"
                         aria-label="Facebook"
                     >
-                        <GrFacebookOption size={20} />
+                        <GrFacebookOption size={30} />
                     </Link>
 
                     <Link
-                        href="#"
+                        href="https://www.linkedin.com/company/pawkeepr/"
+                        target="_blank" 
+                        rel="noopener noreferrer"
                         className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-primary-600"
                         aria-label="Github"
                     >
-                        <RiLinkedinFill size={20} />
+                        <RiLinkedinFill size={30} />
                     </Link>
                 </div>
             </div>
