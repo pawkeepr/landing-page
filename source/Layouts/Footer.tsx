@@ -59,7 +59,7 @@ const Footer = ({ bg = 'transparent' }: FooterProps) => {
                 <div className="flex items-center">
                     <Link
                         href="https://www.instagram.com/pawkeepr.app/"
-                        target="_blank" 
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="mx-2 text-gray-600 transition-colors duration-300 hover:text-primary-600"
                         aria-label="Instagram"
@@ -69,7 +69,7 @@ const Footer = ({ bg = 'transparent' }: FooterProps) => {
 
                     <Link
                         href="https://www.facebook.com/mypawkeeper/"
-                        target="_blank" 
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-primary-600"
                         aria-label="Facebook"
@@ -79,7 +79,7 @@ const Footer = ({ bg = 'transparent' }: FooterProps) => {
 
                     <Link
                         href="https://www.linkedin.com/company/pawkeepr/"
-                        target="_blank" 
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-primary-600"
                         aria-label="Github"
