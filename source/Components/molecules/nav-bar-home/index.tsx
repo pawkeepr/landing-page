@@ -5,13 +5,11 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { MdPerson } from 'react-icons/md'
 import { BtnLink } from '~/Components/atoms/btn'
+import ButtonsModal from '~/Components/atoms/buttons-modal/buttons-modal'
 import ButtonsNavBar from '~/Components/atoms/buttons-nav-bar'
 
 const NavbarHome = () => {
-    // const [isOpenMenu, setIsOpenMenu] = useState(false);
     const [actionScroll, setActionScroll] = useState(false)
-
-    // const toggle = () => setIsOpenMenu(!isOpenMenu);
 
     useEffect(() => {
         window.addEventListener('scroll', scrollNavigation, true)
@@ -47,9 +45,20 @@ const NavbarHome = () => {
                             alt="logo dark"
                         />
                     </Link>
+                    <Link href="/"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    >
+                        Blog
+                    </Link>
+                    <Link href="/"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    >
+                        Pergunte ao especialista
+                    </Link>
+                    <ButtonsModal />
                     <ButtonsNavBar />
-
-                    {/* </Collapse> */}
                 </div>
             </nav>
         </header>
