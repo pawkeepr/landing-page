@@ -8,6 +8,8 @@ import ZoomInSection from '~/Components/atoms/zoom'
 import NavbarHome from '~/Components/molecules/nav-bar-home'
 import { PricingCard } from '~/Components/molecules/pricing-card'
 import Footer from '~/Layouts/Footer'
+import Specialties from './section-specialties/section-specialties'
+import SearchSpecialties from './section-search-specialties/section-search-specialties'
 
 
 const HomePage = () => {
@@ -19,6 +21,36 @@ const HomePage = () => {
                 <div className="absolute inset-0 z-10 bg-overlay-pattern" />
 
                 <div className="relative z-20 grid grid-cols-1 p-4 m-0 web:grid-cols-2">
+                    <ZoomInSection>
+                        <div className="col-span-1 pt-10 pr-4 mt-5 pl-9 mobile:pt-0 mobile:mt-0">
+                            {/* <h1 className="pt-10 font-sans text-4xl font-bold text-left text-white mobile:pb-4 lg:text-4xl">
+                                Você tutor, pode transformar o Cuidado do Seu Pet
+                                com o app Pawkeepr!
+                            </h1> */}
+                            <h1 className="pt-10 font-sans text-4xl font-bold text-left text-white mobile:pb-4 lg:text-4xl">
+                                Agende agora sua consulta
+                            </h1>
+                            <p className="pt-2 pb-4 font-sans text-lg font-semibold text-left text-gray-50 mobile:mb-5 lg:text-2xl">
+                                {`
+                                        Mais de 500 mil especialistas de saúde estão prontos para te ajudar
+                                    `}
+                            </p>
+                            {/* <p className="pt-2 pb-4 font-sans text-lg font-semibold text-left text-white mobile:mb-5 lg:text-2xl">
+                                {`
+                                        Imagine poder gerenciar a saúde do seu pet de forma
+                                    simples e intuitiva, sem perder tempo aprendendo a usar
+                                    o aplicativo. Com o Pawkeepr, você tem acesso a recursos
+                                    poderosos na palma da sua mão, tornando o cuidado com
+                                    seu pet mais fácil e eficiente.
+                                    `}
+                            </p> */}
+                            {/*<div className='px-28'>
+                                    <StoreButtons/>
+                                </div>*/}
+                            <SearchSpecialties />
+                            <Specialties />
+                        </div>
+                    </ZoomInSection>
                     <Slide left>
                         <div className="col-span-1">
                             <img
@@ -28,26 +60,6 @@ const HomePage = () => {
                             />
                         </div>
                     </Slide>
-                    <ZoomInSection>
-                        <div className="col-span-1 pt-10 pr-4 mt-5 pl-9 mobile:pt-0 mobile:mt-0">
-                            <h1 className="pt-10 font-sans text-4xl font-bold text-left text-white mobile:pb-4 lg:text-4xl">
-                                Você tutor, pode transformar o Cuidado do Seu Pet
-                                com o app Pawkeepr!
-                            </h1>
-                            <p className="pt-2 pb-4 font-sans text-lg font-semibold text-left text-white mobile:mb-5 lg:text-2xl">
-                                {`
-                                        Imagine poder gerenciar a saúde do seu pet de forma
-                                    simples e intuitiva, sem perder tempo aprendendo a usar
-                                    o aplicativo. Com o Pawkeepr, você tem acesso a recursos
-                                    poderosos na palma da sua mão, tornando o cuidado com
-                                    seu pet mais fácil e eficiente.
-                                    `}
-                            </p>
-                            {/*<div className='px-28'>
-                                    <StoreButtons/>
-                                </div>*/}
-                        </div>
-                    </ZoomInSection>
                 </div>
             </section>
 
@@ -160,7 +172,7 @@ const HomePage = () => {
                             </div>
                         </div>
                     </Slide>
-                
+
                     <Slide right>
                         <div className="flex items-center web:pt-20 justify-center col-span-1">
                             <img
@@ -309,7 +321,7 @@ const HomePage = () => {
                                     Atualizado
                                 </h2>
                             </div>
-                        
+
 
                             <p className="font-sans text-lg font-semibold text-left">
                                 Registros médicos atualizados automaticamente em
