@@ -32,7 +32,7 @@ const HomePage = () => {
                             </h1>
                             <p className="pt-2 pb-4 font-sans text-lg font-semibold text-left text-gray-50 mobile:mb-5 lg:text-2xl">
                                 {`
-                                        Mais de 500 mil especialistas de saúde estão prontos para te ajudar
+                                        Diversos especialistas de saúde, para o seu Pet, estão prontos para te ajudar
                                     `}
                             </p>
                             {/* <p className="pt-2 pb-4 font-sans text-lg font-semibold text-left text-white mobile:mb-5 lg:text-2xl">
