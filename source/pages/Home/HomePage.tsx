@@ -28,7 +28,7 @@ const HomePage = () => {
                                 com o app Pawkeepr!
                             </h1> */}
                             <h1 className="pt-10 font-sans text-4xl font-bold text-left text-white mobile:pb-4 lg:text-4xl">
-                                Agende agora sua consulta
+                                Procurando um(a) Veterinário(a)? <br />Agende agora sua consulta
                             </h1>
                             <p className="pt-2 pb-4 font-sans text-lg font-semibold text-left text-gray-50 mobile:mb-5 lg:text-2xl">
                                 {`

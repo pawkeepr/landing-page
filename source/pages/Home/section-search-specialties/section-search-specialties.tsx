@@ -19,7 +19,7 @@ const searchButtonStyle =
 
 const SearchSpecialties = () => {
     const [isLocal, setIsLocal] = useState(true);
-    
+
     const specialtiesOptions = [
         { value: 'cardiology', label: 'Cardiologia' },
         { value: 'neurology', label: 'Neurologia' },
@@ -60,12 +60,12 @@ const SearchSpecialties = () => {
                 {isLocal ? (
                     <div className="grid grid-cols-1 md:grid-cols-[3fr_3fr_1fr] gap-4 items-center">
                         <Select
-                            className="border rounded px-6 py-2 bg-white text-base"
+                            className="w-full h-12 text-base"
                             options={specialtiesOptions}
-                            placeholder="Especialidade, doença ou nome"
+                            placeholder="Especialidade"
                         />
                         <Select
-                            className="border rounded px-6 py-2 bg-white text-base"
+                            className="w-full h-12 text-base"
                             options={citiesOptions}
                             placeholder="Cidade ou região"
                         />
@@ -74,7 +74,7 @@ const SearchSpecialties = () => {
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-[4fr_1fr] gap-4 items-center">
                         <Select
-                            className="border rounded px-6 py-2 bg-white text-base"
+                            className="w-full h-12 text-base"
                             options={specialtiesOptions}
                             placeholder="Escolher a especialidade"
                         />
