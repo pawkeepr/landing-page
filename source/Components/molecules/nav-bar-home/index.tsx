@@ -24,7 +24,7 @@ const NavbarHome = () => {
     return (
         <header>
             <nav
-                className="fixed z-50 left-0 right-0 mobile:p-2 px-4 py-2.5 transition-colors bg-white shadow-xl"
+                className="fixed z-50 left-0 right-0 mobile:p-2 px-4 py-1.5 transition-colors bg-white shadow-xl"
             // data-scroll-action={actionScroll}
             >
                 <div className="container flex flex-wrap items-center justify-around gap-2 ">

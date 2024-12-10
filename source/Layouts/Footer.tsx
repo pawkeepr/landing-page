@@ -9,7 +9,7 @@ import { tv } from 'tailwind-variants'
 import withControl from '~/Components/helpers/with-control'
 
 const footer = tv({
-    base: 'w-full py-2 mobile:hidden',
+    base: 'w-full py-1 mobile:hidden',
     variants: {
         bg: {
             transparent: 'bg-transparent',
@@ -30,11 +30,11 @@ const Footer = ({ bg = 'transparent' }: FooterProps) => {
             <div className="flex items-center justify-content-center px-6 flex-row mobile:flex-col">
                 <div className="text-center">
                     <div>
-                        <p className="text-xs text-gray-600 font-semibold" style={{ fontSize: "16px" }}>
+                        <p className="text-xs text-gray-600 font-semibold" style={{ fontSize: "14px" }}>
                             {new Date().getFullYear()} © PawKeepr Sistema Inteligente
                             para Pets Inova Simples LTDA. 49.173.821/0001-19
                         </p>
-                        <p className="text-xs mt-2 text-gray-600 font-semibold" style={{ fontSize: "16px" }}>
+                        <p className="text-xs mt-2 text-gray-600 font-semibold" style={{ fontSize: "14px" }}>
                             Rua Riachuelo, 1200, São José, 49015-160 Aracaju.
                         </p>
                     </div>
@@ -42,7 +42,7 @@ const Footer = ({ bg = 'transparent' }: FooterProps) => {
                         <Link
                             href="/privacy-policy"
                             className="text-xs text-gray-600 font-semibold mx-1 hover:text-secondary-500"
-                            style={{ fontSize: "16px" }}
+                            style={{ fontSize: "14px" }}
                         >
                             Política de Privacidade
                         </Link>
@@ -50,7 +50,7 @@ const Footer = ({ bg = 'transparent' }: FooterProps) => {
                         <Link
                             href="/service-terms"
                             className="text-xs text-gray-600 font-semibold mx-1 hover:text-secondary-500"
-                            style={{ fontSize: "16px" }}
+                            style={{ fontSize: "14px" }}
                         >
                             Termos de Uso
                         </Link>
@@ -64,7 +64,7 @@ const Footer = ({ bg = 'transparent' }: FooterProps) => {
                         className="mx-2 text-gray-600 transition-colors duration-300 hover:text-primary-600"
                         aria-label="Instagram"
                     >
-                        <FaInstagram size={30} />
+                        <FaInstagram size={25} />
                     </Link>
 
                     <Link
@@ -74,7 +74,7 @@ const Footer = ({ bg = 'transparent' }: FooterProps) => {
                         className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-primary-600"
                         aria-label="Facebook"
                     >
-                        <GrFacebookOption size={30} />
+                        <GrFacebookOption size={25} />
                     </Link>
 
                     <Link
@@ -84,7 +84,7 @@ const Footer = ({ bg = 'transparent' }: FooterProps) => {
                         className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-primary-600"
                         aria-label="Github"
                     >
-                        <RiLinkedinFill size={30} />
+                        <RiLinkedinFill size={25} />
                     </Link>
                 </div>
             </div>
