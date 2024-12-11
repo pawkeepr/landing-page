@@ -10,13 +10,13 @@ interface ButtonsNavBarProps {
 
 export const ButtonsNavBar: React.FC<ButtonsNavBarProps> = ({ type }) => {
     return (
-        <div className="z-50 flex gap-2">
+        <div className="z-50 flex flex-col sm:flex-row gap-2 sm:gap-4">
             {type === 'login' ? (
                 <>
                     <BtnLink
                         message="Entre como Tutor"
                         className={cn(
-                            'text-black text-base hover:bg-secondary-500 !border-secondary-500 border-0 w-fit',
+                            'text-black text-base hover:bg-secondary-500 !border-secondary-500 border-0 w-full sm:w-auto',
                         )}
                         href="https://b75d4674.homolog.tutor.pawkeepr.app.br/t/sign-in"
                     >
@@ -24,7 +24,9 @@ export const ButtonsNavBar: React.FC<ButtonsNavBarProps> = ({ type }) => {
                     </BtnLink>
                     <BtnLink
                         message="Entre como Veterinário"
-                        className={cn('border-primary-600 text-base hover:bg-gray-600 border-0 w-fit')}
+                        className={cn(
+                            'border-primary-600 text-base hover:bg-gray-600 border-0 w-full sm:w-auto',
+                        )}
                         href="https://0730c0c5.homolog.vet.pawkeepr.app.br/v/sign-in"
                     >
                         <MdPerson className="w-6 h-6" />
@@ -35,7 +37,7 @@ export const ButtonsNavBar: React.FC<ButtonsNavBarProps> = ({ type }) => {
                     <BtnLink
                         message="Cadastre-se como Tutor"
                         className={cn(
-                            'text-black text-base hover:bg-secondary-500 !border-secondary-500 border-0 w-fit',
+                            'text-black text-base hover:bg-secondary-500 !border-secondary-500 border-0 w-full sm:w-auto',
                         )}
                         href="https://b75d4674.homolog.tutor.pawkeepr.app.br/t/sign-up"
                     >
@@ -43,7 +45,9 @@ export const ButtonsNavBar: React.FC<ButtonsNavBarProps> = ({ type }) => {
                     </BtnLink>
                     <BtnLink
                         message="Cadastre-se como Veterinário"
-                        className={cn('border-primary-600 text-base hover:bg-gray-600 border-0 w-fit')}
+                        className={cn(
+                            'border-primary-600 text-base hover:bg-gray-600 border-0 w-full sm:w-auto',
+                        )}
                         href="https://0730c0c5.homolog.vet.pawkeepr.app.br/v/sign-up"
                     >
                         <MdPerson className="w-6 h-6" />

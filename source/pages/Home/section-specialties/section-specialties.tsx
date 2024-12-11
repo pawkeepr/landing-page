@@ -1,4 +1,4 @@
-'use cliente'
+'use client';
 
 import React from 'react'
 import Link from 'next/link'
@@ -26,7 +26,7 @@ const container = tv({
 
 const Specialties = () => {
     return (
-        <div className={container({ columns: 'four', spacing: 'large' })}>
+        <div className={`${container({ spacing: 'large' })} sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4`}>
             <Link href={''}>
                 Coluna 1
             </Link>
