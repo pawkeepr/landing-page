@@ -20,25 +20,27 @@ export const ButtonsModal: React.FC = () => {
 
     return (
         <>
-            <button
-                onClick={() => openModal('login')}
-                className="px-4 py-2 text-black rounded-md hover:bg-secondary-500"
-            >
-                Entrar
-            </button>
-            <button
-                onClick={() => openModal('register')}
-                className="px-4 py-2 ml-2 text-black rounded-md hover:bg-secondary-500"
-            >
-                Cadastre-se
-            </button>
+            <div className="flex flex-col sm:flex-row gap-2">
+                <button
+                    onClick={() => openModal('login')}
+                    className="px-4 py-2 text-black rounded-md hover:bg-secondary-500 w-full sm:w-auto"
+                >
+                    Entrar
+                </button>
+                <button
+                    onClick={() => openModal('register')}
+                    className="px-4 py-2 text-black rounded-md hover:bg-secondary-500 w-full sm:w-auto"
+                >
+                    Cadastre-se
+                </button>
+            </div>
 
             <Dialog open={!!modalType} onClose={closeModal} className="fixed inset-0 z-50">
                 <DialogBackdrop className="fixed inset-0 bg-gray-500/75 z-40" />
                 <div className="fixed inset-0 z-50 w-screen overflow-y-auto">
                     <div className="flex min-h-full items-center justify-center p-4 text-center">
                         <DialogPanel
-                            className="w-full max-w-md transform overflow-hidden rounded-lg bg-white shadow-xl transition-all"
+                            className="w-full sm:max-w-md max-w-[90%] transform overflow-hidden rounded-lg bg-white shadow-xl transition-all"
                         >
                             <div className="p-6">{getModalContent()}</div>
                         </DialogPanel>

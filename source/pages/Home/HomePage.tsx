@@ -10,6 +10,7 @@ import { PricingCard } from '~/Components/molecules/pricing-card'
 import Footer from '~/Layouts/Footer'
 import Specialties from './section-specialties/section-specialties'
 import SearchSpecialties from './section-search-specialties/section-search-specialties'
+import SectionCarouselSpecialties from './section-carousel/section-carousel'
 
 
 const HomePage = () => {
@@ -49,6 +50,7 @@ const HomePage = () => {
                                 </div>*/}
                             <SearchSpecialties />
                             <Specialties />
+                            <SectionCarouselSpecialties />
                         </div>
                     </ZoomInSection>
                     <Slide left>
