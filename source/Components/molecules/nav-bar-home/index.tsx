@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import ButtonsModal from '~/Components/atoms/buttons-modal/buttons-modal'
 
+
 const NavbarHome = () => {
     const [actionScroll, setActionScroll] = useState(false)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -46,9 +47,7 @@ const NavbarHome = () => {
 
                     <div className={`lg:flex items-center gap-4 ${isMenuOpen ? 'block' : 'hidden'} lg:block`}>
                         <Link
-                            href="/"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            href="/blog"
                             className="px-4 py-2 text-black rounded-md hover:bg-secondary-500"
                         >
                             Blog
