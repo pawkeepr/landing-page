@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import ZoomInSection from "~/Components/atoms/zoom/zoom";
 
 const NewsCard = ({ image, date, title, description, link }) => (
@@ -14,31 +15,40 @@ const NewsCard = ({ image, date, title, description, link }) => (
 );
 
 const BlogHome = () => {
-    const featuredNews = {
-        image: "/home/featured.png",
-        date: "13 Dez 2024",
-        title: "Título da Notícia Principal",
-        description: "Descrição da notícia.",
-        link: "/noticia-destaque",
-    };
+    const [posts, setPosts] = useState([]);
+    const [loading, setLoading] = useState(true);
 
-    const newsData = Array.from({ length: 50 }, (_, index) => ({
-        image: `/home/news-${index + 1}.png`,
-        date: `12 Dez 2024`,
-        title: `Título da Notícia ${index + 1}`,
-        description: `Descrição da notícia ${index + 1}.`,
-        link: `/noticia-${index + 1}`,
-    }));
+    useEffect(() => {
+        const fetchPosts = async () => {
+            try {
+                const response = await axios.get("https://pawkeepr.blog/wp-json/wp/v2/posts");
+                const formattedPosts = response.data.map((post) => ({
+                    image: post.featured_media_url,
+                    date: new Date(post.date).toLocaleDateString(),
+                    title: post.title.rendered,
+                    description: post.excerpt.rendered.replace(/<[^>]+>/g, ""),
+                    link: post.link,
+                }));
+                setPosts(formattedPosts);
+            } catch (error) {
+                console.error("Erro ao buscar posts:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchPosts();
+    }, []);
 
     const [currentPage, setCurrentPage] = useState(1);
-    const newsPerPage = 12;
-    const totalPages = Math.ceil(newsData.length / newsPerPage);
+    const newsPerPage = 6;
+    const totalPages = Math.ceil(posts.length / newsPerPage);
 
     const handlePageChange = (page) => {
         setCurrentPage(page);
     };
 
-    const currentNews = newsData.slice(
+    const currentNews = posts.slice(
         (currentPage - 1) * newsPerPage,
         currentPage * newsPerPage
     );
@@ -46,25 +56,36 @@ const BlogHome = () => {
     return (
         <div className="p-4">
             <ZoomInSection>
-                <div className="flex flex-col md:flex-row items-center bg-white shadow-2xl rounded-3xl p-6 mb-12">
-                    <img
-                        src={featuredNews.image}
-                        alt="Featured"
-                        className="w-full md:w-1/3 h-64 object-cover rounded-md mb-4 md:mb-0 md:mr-6"
-                    />
-                    <div className="flex flex-col w-full md:w-2/3">
-                        <p className="text-gray-500 text-sm mb-2">{featuredNews.date}</p>
-                        <h2 className="font-bold text-2xl text-black mb-4">{featuredNews.title}</h2>
-                        <p className="text-gray-600 text-lg mb-4">{featuredNews.description}</p>
-                        <a href={featuredNews.link} className="text-blue-500 text-sm font-semibold hover:underline">
-                            Leia mais
-                        </a>
+                {loading ? (
+                    <p>Carregando notícias...</p>
+                ) : (
+                    <div className="flex flex-col md:flex-row items-center bg-white shadow-2xl rounded-3xl p-6 mb-12">
+                        <img
+                            src={currentNews[0]?.image || "/placeholder.png"}
+                            alt="Featured"
+                            className="w-full md:w-1/3 h-64 object-cover rounded-md mb-4 md:mb-0 md:mr-6"
+                        />
+                        <div className="flex flex-col w-full md:w-2/3">
+                            <p className="text-gray-500 text-sm mb-2">{currentNews[0]?.date}</p>
+                            <h2 className="font-bold text-2xl text-black mb-4">
+                                {currentNews[0]?.title || "Sem título"}
+                            </h2>
+                            <p className="text-gray-600 text-lg mb-4">
+                                {currentNews[0]?.description || "Sem descrição disponível."}
+                            </p>
+                            <a
+                                href={currentNews[0]?.link || "#"}
+                                className="text-blue-500 text-sm font-semibold hover:underline"
+                            >
+                                Leia mais
+                            </a>
+                        </div>
                     </div>
-                </div>
+                )}
             </ZoomInSection>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                {currentNews.map((news, index) => (
+                {currentNews.slice(1).map((news, index) => (
                     <NewsCard
                         key={index}
                         image={news.image}
