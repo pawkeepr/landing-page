@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 
-const ProfessionalCard = ({ image, name, title, rating, reviews, crp, address, price }) => (
+const ProfessionalCard = ({ image, name, specialty, crmv, address }) => (
     <div className="flex flex-col items-center p-4 bg-white shadow-lg rounded-lg border">
         <img
             src={image}
             alt={name}
             className="w-24 h-24 object-cover rounded-full mb-4"
+            onError={(e) => {
+                e.target.onerror = null; // Evitando loops infinitos
+                e.target.src = "/Tutor1.png"; // Substituindo por imagem padrão
+            }}
         />
         <h3 className="font-bold text-lg text-black mb-1 text-center">{name}</h3>
-        <p className="text-gray-600 text-sm text-center mb-1">{title}</p>
-        <div className="flex items-center space-x-1 text-green-600 mb-2">
-            <span className="text-sm font-semibold">{rating} ★</span>
-            <span className="text-sm text-gray-500">({reviews} opiniões)</span>
-        </div>
-        <p className="text-gray-500 text-sm mb-1">CRP {crp}</p>
-        <p className="text-gray-500 text-sm mb-4 text-center">{address}</p>
-        <p className="text-black font-semibold text-sm mb-2">R$ {price}</p>
+        <p className="text-gray-600 text-sm text-center mb-1">{specialty || "Especialidade não informada"}</p>
+        <p className="text-gray-500 text-sm mb-1">CRMV {crmv || "Não informado"}</p>
+        <p className="text-gray-500 text-sm mb-4 text-center">{address || "Endereço não informado"}</p>
         <button className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
             Agende sua consulta
         </button>
@@ -24,22 +24,37 @@ const ProfessionalCard = ({ image, name, title, rating, reviews, crp, address, p
 
 const ProfessionalList = () => {
     const [professionalsData, setProfessionalsData] = useState([]);
+    const [isClient, setIsClient] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
     const professionalsPerPage = 12;
 
     useEffect(() => {
-        const data = Array.from({ length: 50 }, (_, index) => ({
-            image: `/path/to/image-${index + 1}.jpg`,
-            name: `Profissional ${index + 1}`,
-            title: "Psicólogo(a)",
-            rating: (4.5 + Math.random() * 0.5).toFixed(1),
-            reviews: Math.floor(Math.random() * 20 + 1),
-            crp: `06/${Math.floor(10000 + Math.random() * 90000)}`,
-            address: `Endereço ${index + 1}, São Paulo`,
-            price: Math.floor(150 + Math.random() * 50),
-        }));
-        setProfessionalsData(data);
+        setIsClient(true);
     }, []);
+
+    useEffect(() => {
+        const fetchProfessionals = async () => {
+            try {
+                const response = await axios.get(
+                    "https://wqwkbo2249.execute-api.us-east-1.amazonaws.com/testdevelopment/api-external/all-vet-address?city=S%C3%A3o%20Crist%C3%B3v%C3%A3o"
+                );
+                const formattedData = response.data.map((item) => ({
+                    image: item.url_img || "Tutor1.png",
+                    name: item.name || `${item.first_name} ${item.last_name}`,
+                    specialty: item.veterinary_information?.specialty || "Especialidade não informada",
+                    crmv: item.veterinary_information?.crmv || "Não informado",
+                    address: `${item.address?.street || "Rua desconhecida"}, ${item.address?.number || "S/N"}, ${item.address?.neighborhood || "Bairro desconhecido"}, ${item.address?.city || "Cidade desconhecida"}, ${item.address?.state || "Estado desconhecido"}, ${item.address?.zipCode || "CEP desconhecido"}`,
+                }));
+                setProfessionalsData(formattedData);
+            } catch (error) {
+                console.error("Erro ao buscar dados:", error);
+            }
+        };
+
+        fetchProfessionals();
+    }, []);
+
+    if (!isClient) return null;
 
     const totalPages = Math.ceil(professionalsData.length / professionalsPerPage);
 
@@ -65,11 +80,10 @@ const ProfessionalList = () => {
                     <button
                         key={index}
                         onClick={() => handlePageChange(index + 1)}
-                        className={`px-4 py-2 rounded-md ${
-                            currentPage === index + 1
+                        className={`px-4 py-2 rounded-md ${currentPage === index + 1
                                 ? "bg-blue-500 text-white"
                                 : "bg-gray-200 text-gray-700"
-                        }`}
+                            }`}
                     >
                         {index + 1}
                     </button>
