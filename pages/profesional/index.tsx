@@ -6,14 +6,14 @@ import SearchSpecialties from '~/pages/Home/section-search-specialties/section-s
 
 const LadingPageNext = () => {
     return (
-        <section className="w-full overflow-x-hidden">
+        <section className="flex flex-col min-h-screen w-full overflow-x-hidden">
             <NavbarHome />
             <section className="relative pt-16 bg-primary-500" id="hero">
                 <HeaderTitle title={'Profissionais'} />
             </section>
-            <section className="flex flex-col items-center justify-center bg-primary-500 pb-14">
+            <section className="flex flex-col items-center justify-center bg-primary-500 pb-14 flex-grow">
                 <SearchSpecialties />
-                <ProfessionalList />
+                <ProfessionalList city={undefined} /> {/* {Temporário} */}
             </section>
             <div className="inset-x-0 bottom-0 z-20">
                 <Footer />

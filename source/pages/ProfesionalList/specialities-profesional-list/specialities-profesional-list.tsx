@@ -22,10 +22,11 @@ const ProfessionalCard = ({ image, name, specialty, crmv, address }) => (
     </div>
 );
 
-const ProfessionalList = () => {
+const ProfessionalList = ({ city }) => {
     const [professionalsData, setProfessionalsData] = useState([]);
     const [isClient, setIsClient] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
+    const [error, setError] = useState(false);
     const professionalsPerPage = 12;
 
     useEffect(() => {
@@ -34,25 +35,37 @@ const ProfessionalList = () => {
 
     useEffect(() => {
         const fetchProfessionals = async () => {
+            if (!city) {
+                setError(true);
+                return;
+            }
+
             try {
                 const response = await axios.get(
-                    "https://wqwkbo2249.execute-api.us-east-1.amazonaws.com/testdevelopment/api-external/all-vet-address?city=S%C3%A3o%20Crist%C3%B3v%C3%A3o"
+                    `https://wqwkbo2249.execute-api.us-east-1.amazonaws.com/testdevelopment/api-external/all-vet-address?city=${encodeURIComponent(city)}`
                 );
-                const formattedData = response.data.map((item) => ({
-                    image: item.url_img || "Tutor1.png",
-                    name: item.name || `${item.first_name} ${item.last_name}`,
-                    specialty: item.veterinary_information?.specialty || "Especialidade não informada",
-                    crmv: item.veterinary_information?.crmv || "Não informado",
-                    address: `${item.address?.street || "Rua desconhecida"}, ${item.address?.number || "S/N"}, ${item.address?.neighborhood || "Bairro desconhecido"}, ${item.address?.city || "Cidade desconhecida"}, ${item.address?.state || "Estado desconhecido"}, ${item.address?.zipCode || "CEP desconhecido"}`,
-                }));
-                setProfessionalsData(formattedData);
+
+                if (response.data.length === 0) {
+                    setError(true);
+                } else {
+                    const formattedData = response.data.map((item) => ({
+                        image: item.url_img || "Tutor1.png",
+                        name: item.name || `${item.first_name} ${item.last_name}`,
+                        specialty: item.veterinary_information?.specialty || "Especialidade não informada",
+                        crmv: item.veterinary_information?.crmv || "Não informado",
+                        address: `${item.address?.street || "Rua desconhecida"}, ${item.address?.number || "S/N"}, ${item.address?.neighborhood || "Bairro desconhecido"}, ${item.address?.city || "Cidade desconhecida"}, ${item.address?.state || "Estado desconhecido"}, ${item.address?.zipCode || "CEP desconhecido"}`,
+                    }));
+                    setProfessionalsData(formattedData);
+                    setError(false);
+                }
             } catch (error) {
                 console.error("Erro ao buscar dados:", error);
+                setError(true);
             }
         };
 
         fetchProfessionals();
-    }, []);
+    }, [city]);
 
     if (!isClient) return null;
 
@@ -66,6 +79,14 @@ const ProfessionalList = () => {
         (currentPage - 1) * professionalsPerPage,
         currentPage * professionalsPerPage
     );
+
+    if (error) {
+        return (
+            <div className="text-center py-8 text-red-600">
+                <p>Não foram encontrados profissionais para esta região.</p>
+            </div>
+        );
+    }
 
     return (
         <div className="p-4">
