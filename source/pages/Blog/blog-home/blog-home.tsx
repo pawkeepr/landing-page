@@ -2,13 +2,24 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ZoomInSection from "~/Components/atoms/zoom/zoom";
 
-const NewsCard = ({ image, date, title, description, link }) => (
+const NewsCard = ({ id, image, date, title, description }) => (
     <div className="flex flex-col items-center p-4 bg-white shadow-lg rounded-lg">
-        <img src={image} alt={title} className="w-full h-40 object-cover rounded-md mb-4" />
+        <img
+            src={image || "/Tutor1.png"} // Usando a imagem de fallback
+            alt={title}
+            className="w-full h-40 object-cover rounded-md mb-4"
+            onError={(e) => {
+                e.target.onerror = null; // Evita loop infinito
+                e.target.src = '/Tutor1.png'; // Imagem de fallback
+            }}
+        />
         <p className="text-gray-500 text-sm mb-2">{date}</p>
         <h3 className="font-bold text-lg text-black mb-2 text-center">{title}</h3>
         <p className="text-gray-600 text-sm text-center mb-2">{description}</p>
-        <a href={link} className="text-blue-500 text-sm font-semibold hover:underline">
+        <a
+            href={`/blog/news/new?id=${id}`}
+            className="text-blue-500 text-sm font-semibold hover:underline"
+        >
             Leia mais
         </a>
     </div>
@@ -23,6 +34,7 @@ const BlogHome = () => {
             try {
                 const response = await axios.get("https://pawkeepr.blog/wp-json/wp/v2/posts");
                 const formattedPosts = response.data.map((post) => ({
+                    id: post.id,
                     image: post.featured_media_url,
                     date: new Date(post.date).toLocaleDateString(),
                     title: post.title.rendered,
@@ -61,9 +73,13 @@ const BlogHome = () => {
                 ) : (
                     <div className="flex flex-col md:flex-row items-center bg-white shadow-2xl rounded-3xl p-6 mb-12">
                         <img
-                            src={currentNews[0]?.image || "/placeholder.png"}
+                            src={currentNews[0]?.image || "/Tutor1.png"} // Exibe a imagem do WordPress ou a padrão
                             alt="Featured"
                             className="w-full md:w-1/3 h-64 object-cover rounded-md mb-4 md:mb-0 md:mr-6"
+                            onError={(e) => {
+                                e.target.onerror = null;
+                                e.target.src = '/Tutor1.png'; // Imagem de fallback
+                            }}
                         />
                         <div className="flex flex-col w-full md:w-2/3">
                             <p className="text-gray-500 text-sm mb-2">{currentNews[0]?.date}</p>
@@ -74,7 +90,7 @@ const BlogHome = () => {
                                 {currentNews[0]?.description || "Sem descrição disponível."}
                             </p>
                             <a
-                                href={currentNews[0]?.link || "#"}
+                                href={`/blog/news/new?id=${currentNews[0]?.id}`}
                                 className="text-blue-500 text-sm font-semibold hover:underline"
                             >
                                 Leia mais
@@ -88,11 +104,11 @@ const BlogHome = () => {
                 {currentNews.slice(1).map((news, index) => (
                     <NewsCard
                         key={index}
-                        image={news.image}
+                        id={news.id}
+                        image={news.image || "/Tutor1.png"} // A mesma lógica de fallback
                         date={news.date}
                         title={news.title}
                         description={news.description}
-                        link={news.link}
                     />
                 ))}
             </div>
@@ -102,11 +118,9 @@ const BlogHome = () => {
                     <button
                         key={index}
                         onClick={() => handlePageChange(index + 1)}
-                        className={`px-4 py-2 rounded-md ${
-                            currentPage === index + 1
-                                ? "bg-blue-500 text-white"
-                                : "bg-gray-200 text-gray-700"
-                        }`}
+                        className={`px-4 py-2 rounded-md ${currentPage === index + 1
+                            ? "bg-blue-500 text-white"
+                            : "bg-gray-200 text-gray-700"}`}
                     >
                         {index + 1}
                     </button>
