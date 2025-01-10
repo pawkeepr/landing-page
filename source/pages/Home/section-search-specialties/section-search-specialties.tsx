@@ -70,8 +70,8 @@ const SearchSpecialties = () => {
                         <Select
                             className="w-full h-12 text-base"
                             options={citiesOptions}
-                            placeholder="Cidade ou região"
-                            aria-label="Selecionar cidade ou região"
+                            placeholder="Cidade"
+                            aria-label="Selecionar cidade"
                         />
                         <button className={searchButtonStyle} aria-label="Pesquisar">
                             Pesquisar

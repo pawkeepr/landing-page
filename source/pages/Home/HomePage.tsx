@@ -50,7 +50,7 @@ const HomePage = () => {
                                 </div>*/}
                             <SearchSpecialties />
                             <Specialties />
-                            <SectionCarouselSpecialties />
+                            <SectionCarouselSpecialties city={undefined} /> {/* Temporário */}
                         </div>
                     </ZoomInSection>
                     <Slide left>
