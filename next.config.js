@@ -2,9 +2,20 @@ require('dotenv').config()
 
 /**@type {import('next').NextConfig} */
 const nextConfig = ((_phase) => {
-    // const isProduction = phase === 'production'        
+    // const isProduction = phase === 'production'
 
     return {
+        redirects() {
+            return [
+                process.env.MAINTENANCE_MODE === '1'
+                    ? {
+                          source: '/((?!maintenance).*)',
+                          destination: '/maintenance',
+                          permanent: false,
+                      }
+                    : null,
+            ].filter(Boolean)
+        },
         publicRuntimeConfig: {
             publicRoutes: [
                 '/sign-in',
@@ -33,11 +44,12 @@ const nextConfig = ((_phase) => {
             ignoreBuildErrors: true,
         },
         env: {
-            API_URL: process.env.REACT_APP_API_URL ,
+            API_URL: process.env.REACT_APP_API_URL,
             SECRET_KEY: process.env.SECRET_KEY,
             REGION: process.env.REGION,
             USER_POOL_ID: process.env.USER_POOL_ID,
             USER_POOL_WEB_CLIENT_ID: process.env.USER_POOL_WEB_CLIENT_ID,
+            MAINTENANCE_MODE: process.env.MAINTENANCE_MODE,
         },
         i18n: {
             locales: ['pt-BR', 'en'],
